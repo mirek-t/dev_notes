@@ -982,16 +982,66 @@ p1.then((message) => {
   console.log(message);
 }).catch((error) => console.log(error));
 ```
-3. Generator
+3. Generatory - potrafią zamrażać stan funkcji, wywołuje się je metodą next(), mogą zamrażać się wewnątrz linijki kodu, yield zwraca wartość i zamraża się w danym yieldzie, couroutine (coro) -> współprogram (kiedy generator przyjmuje parametry). W zwykłaj funkcji po wykonaniu i zwróceniu wyniku garbage collector niszczy stan funkcji, w generatorach jest on niszczony po ostatnim wykonaniu. Generatory są lazy evaluated - tzn. obliczniea sa wykonywane dopiero na żądanie
+
+```js
+function add(a, b) {
+  return a + b;
+}
+add(2, 4);
+
+function* gen() {
+  console.log("1 elo");
+  yield 1;
+  console.log("2 elo");
+  yield 2;
+  console.log("3 elo");
+  yield 3;
+  console.log("4 elo");
+}
+
+const g = gen();
+
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+
+function* infiniteLoop() {
+  let counter = 0;
+
+  while (true) {
+    yield counter;
+    counter++;
+    if (counter === 3) {
+      return "dupa";
+    }
+  }
+}
+
+const iL = infiniteLoop();
+console.log(iL.next());
+console.log(iL.next());
+console.log(iL.next());
+console.log(iL.next());
+console.log(iL.next());
+
+function* gen() {
+  const x = 1;
+  const z = yield x;
+  yield z;
+}
+
+const g = gen();
+console.log(g.next());
+console.log(g.next(42));
+console.log(g.next());
+```
 4. Async/Await
 
 ### EDD - event driven development
-- programowanie oparte na zdarzeniach, gdy jest jakas 
+- programowanie oparte na zdarzeniach, gdy jest jakas ingerencja, zdarzenie
 - reactiv programing (programowanie oparte na zmianie streamow) - np. Netflix (3 streamy) - data stream (paczka RxJs do pracy ze streamami)
-
-### Lazy-evaluated - obliczenia są wykonywane dopiero na żądanie
-
-### couroutine (coro) -> współprogram (generator z parametrami)
 
 #
 
