@@ -932,18 +932,62 @@ console.log(y);//log [4,5]
 
 ### History of asynchronous
 
-1. Callback - function (callback hell)
-2. Promise
+1. Callback - function - wykonuje się gdy coś się stanie, np. zostanie wyemitowany event, który jest obsługiwany (callback hell)
+```js
+const boxRef = document.getElementById("box");
+let counter = 0;
+
+const interval = setInterval(() => {
+  counter += 2;
+  boxRef.style.left = counter + "px";
+}, 200);
+
+// console.log(counter); //log: 0 - to jest kod synchrnoiczny wykonuje się przed asynchronicznym 
+
+setTimeout(() => {
+  clearInterval(interval);
+
+  counter = 0;
+  const interval2 = setInterval(() => {
+    counter += 2;
+    boxRef.style.top = counter + "px";
+  }, 200);
+
+  setTimeout(() => {
+    clearInterval(interval2);
+  }, 2000);
+}, 2000);
+```
+2. Promise - od 2015r
+- zapytanie asynchroniczne do serwera - AJAX - asynchronous javascript and xml (xml -> extended markup language)
+- JSON - js object notation
+```js
+//użycie featch, który jest promise based
+fetch("http://api.nbp.pl/api/exchangerates/tables/a/?format=json")
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((error) => console.log(error));
+//stworzenie Promise'a
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Fulfuled");
+  }, 2000);
+
+  setTimeout(() => {
+    reject("Rejected");
+  }, 1999);
+});
+
+p1.then((message) => {
+  console.log(message);
+}).catch((error) => console.log(error));
+```
 3. Generator
 4. Async/Await
 
-### AJAX - asynchronous javascript and xml (xml -> extended markup language)
-
-### JSON - js object notation
-
 ### EDD - event driven development
-
-### Reactive programming - data stream (RxJs)
+- programowanie oparte na zdarzeniach, gdy jest jakas 
+- reactiv programing (programowanie oparte na zmianie streamow) - np. Netflix (3 streamy) - data stream (paczka RxJs do pracy ze streamami)
 
 ### Lazy-evaluated - obliczenia są wykonywane dopiero na żądanie
 
