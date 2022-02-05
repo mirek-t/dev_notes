@@ -982,13 +982,13 @@ p1.then((message) => {
   console.log(message);
 }).catch((error) => console.log(error));
 ```
-3. Generatory - potrafią zamrażać stan funkcji, wywołuje się je metodą next(), mogą zamrażać się wewnątrz linijki kodu, yield zwraca wartość i zamraża się w danym yieldzie, couroutine (coro) -> współprogram (kiedy generator przyjmuje parametry). W zwykłaj funkcji po wykonaniu i zwróceniu wyniku garbage collector niszczy stan funkcji, w generatorach jest on niszczony po ostatnim wykonaniu. Generatory są lazy evaluated - tzn. obliczniea sa wykonywane dopiero na żądanie
+3. Generatory - potrafią zamrażać stan funkcji, wywołuje się je metodą next(), mogą zamrażać się wewnątrz linijki kodu, yield zwraca wartość i zamraża się w danym yieldzie, couroutine (coro) -> współprogram (kiedy generator przyjmuje parametry przekazane do niego jako argument metody next(42).). W zwykłaj funkcji po wykonaniu i zwróceniu wyniku garbage collector niszczy stan funkcji, w generatorach jest on niszczony po ostatnim wykonaniu. Generatory są lazy evaluated - tzn. obliczniea sa wykonywane dopiero na żądanie, gdy poprosimy generator o ich wykonanie, tzn. wywołanie generatora nic nie zwraca dopiero yield. Możemy mieć wiele instancji jednego generatora i w różnych momentach zużywać jego zasoby niezależnie. Generatory trzeba zainstancjonować (stworzyć instancję poprzez przypisaneie generatora do jakiejś zmniennej)
 
 ```js
 function add(a, b) {
   return a + b;
 }
-add(2, 4);
+add(2, 4);// ponieważ to jest zwykła funkcja to garbage collector usunie jej stan zaraz po wykonaniu i zwróceniu wartości
 
 function* gen() {
   console.log("1 elo");
@@ -1002,10 +1002,10 @@ function* gen() {
 
 const g = gen();
 
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
-console.log(g.next());
+console.log(g.next());//{value: 1, done: false}
+console.log(g.next());//{value: 2, done: false}
+console.log(g.next());//{value: 3, done: false}
+console.log(g.next());//{value: undefined, done: true}
 
 function* infiniteLoop() {
   let counter = 0;
@@ -1037,10 +1037,32 @@ console.log(g.next());
 console.log(g.next(42));
 console.log(g.next());
 ```
+---
+```js
+const k =function* (){
+   let counter = 0;
+
+   while (true) {
+      yield counter;
+      counter++;
+   }
+}
+
+const g = k(); //instancja generatora
+
+const interval = setInterval(() => {
+   const result = g.next();
+   console.log(result); 
+
+   if (result.value > 10) {
+      clearInterval(interval);// możemy go tu usunąć bo zmienna jest tu widoczna
+   }
+}, 500);
+```
 4. Async/Await
 
 ### EDD - event driven development
-- programowanie oparte na zdarzeniach, gdy jest jakas ingerencja, zdarzenie
+- programowanie oparte na zdarzeniach, gdy sa jakies ingerencje, zdarzenia
 - reactiv programing (programowanie oparte na zmianie streamow) - np. Netflix (3 streamy) - data stream (paczka RxJs do pracy ze streamami)
 
 #
@@ -1053,9 +1075,68 @@ console.log(g.next());
 
 > # 8 listopad 2021
 
+## Powtórka
+
+1. Scope - przenoszenie deklaracji zmiennej var, deklaracji funkcji i deklaracji klas na górę aktualnie przetwarzanego zasięgu (w quirks mode).
+```js
+//Jak ddziała hoisting, ten kod napisany w ten sposób:
+var x= 42;
+
+function doSmth(){
+   console.log(y);
+   var y =42;
+}
+
+console.log(doSmth());
+
+//po hoistingu będzie wyglądał następująco
+var x;
+
+function doSmth(){
+   var y;
+   console.log(y);
+   y =42;
+}
+
+x= 42;
+
+console.log(doSmth());
+```
+---
+```js
+const x = 0;
+
+if (0){ //warunek jest fałszem, blok sie nie wykonuje, ale var ma zasięg funkcyjny dlatego klamerki go nieograniczają
+   var y = 666;
+   let z = 665;
+}
+
+console.log(y);// undefined, deklaracja przeniesiona na górę całego zasięgu
+console.log(z);// błąd, nie ma takiej zmiennej 
+```
+---
+```js
+//hoisting wyrażeń funkcyjnych
+doSmth();
+
+var doSmth = function(){
+   console.log("I don't think so");
+};
+// po hoistingu kod wygląda tak
+var doSmth;
+
+doSmth();//doSmth is not a function
+
+doSmth = function(){
+   console.log("I don't think so");
+};
+```
+2. Async-Await jest to funkcjonalność JS, a dokładniej jest to sytactic sugar - lukier składnowy dlaczegoś co już istnieje (w tym przypadku dla promisa i generatora razem)
+3. 
+
 ## Zajęcia
 
-1.
+#
 
 > # 10 listopad 2021
 
