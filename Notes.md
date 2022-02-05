@@ -1079,7 +1079,7 @@ const interval = setInterval(() => {
 
 1. Scope - przenoszenie deklaracji zmiennej var, deklaracji funkcji i deklaracji klas na górę aktualnie przetwarzanego zasięgu (w quirks mode).
 ```js
-//Jak ddziała hoisting, ten kod napisany w ten sposób:
+//Hoisting, działa tak, że kod napisany w ten sposób:
 var x= 42;
 
 function doSmth(){
@@ -1089,7 +1089,7 @@ function doSmth(){
 
 console.log(doSmth());
 
-//po hoistingu będzie wyglądał następująco
+//po hoistingu będzie wyglądał następująco dla interpretera
 var x;
 
 function doSmth(){
@@ -1132,9 +1132,17 @@ doSmth = function(){
 };
 ```
 2. Async-Await jest to funkcjonalność JS, a dokładniej jest to sytactic sugar - lukier składnowy dlaczegoś co już istnieje (w tym przypadku dla promisa i generatora razem)
-3. 
+3. promise tworzymy za pomocą słowa kluczowego wywołując konstruktor new Promise, on przyjmuje jako parametr deklaracje funkcji, która z kolei ma dwa parametry - dwie funkcje (resolve, reject), które w zależności czy zapytanie dostanie najpierw odpowiedź bądź zwróci error wywoła się jako pierwsza, a ta druga nie zostanie wywołana
+4. resolve obsługujemy metodą .then, a reject obsługujemy metodą .catch
+5. generatory tworzymy za pomoą słowa kluczowego function*, w środku musi mieć yield który jest zamrażany. pętle nieskończoną tworzymy za pomocą while (true)
+6. generator musimy zainstancjonować, potem wywołujemy za pomocą metody .next() -> każdy kolejny yield
+7. setInterval w asynchroniczności musimy przpisać do zmiennej bo tylko wtedy jesteśmy w stanie usunąć jego dzialanie funkcją clearInterval(taZmienna)
+8. fetch jest promis based i defaultowo robi get i pobiera dane
+9. >Design pattern - najlepsze rozwiązanie istniejącego problemu programistycznego - np. subscriber observer
 
 ## Zajęcia
+
+1. 
 
 #
 
@@ -1148,14 +1156,7 @@ doSmth = function(){
 
 ## Zajęcia
 
-1. async await
-2. promise tworzymy za pomocą słowa kluczowego wywołujemy konstruktor new Promise, on przyjmuje jako parametr deklaracje funkcji, która z kolei ma dwa stany resolve, reject
-3. resolve obsługujemy metodą .then, a reject obsługujemy metodą .catch
-4. generatory tworzymy za pomoą słowa kluczowego function\*, w środku musi mieć yield który jest zamrażany. pętle nieskończoną tworzymy za pomocą while (true)
-5. generator wywołujemy za pomocą metody .next() -> każdy kolejny yield
-6. setInterval w asynchroniczności musimy przpisać do zmiennej bo tylko wtedy jesteśmy wstanie usunąć jego dzialanie funkcją clearInterval(zmienna)
-7. fetch jest promisem i defaultowo robi get i pobiera dane
-8.
+
 
 > # 10 listopad 2021
 
