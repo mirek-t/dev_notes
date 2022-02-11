@@ -1071,7 +1071,7 @@ const interval = setInterval(() => {
 
 ## Ogólne info
 
-1.
+1. ----
 
 > # 8 listopad 2021
 
@@ -1140,32 +1140,51 @@ doSmth = function(){
 8. fetch jest promis based i defaultowo robi get i pobiera dane
 9. >Design pattern - najlepsze rozwiązanie istniejącego problemu programistycznego - np. subscriber observer
 
-## Zajęcia
-
-1. 
-
 #
 
 > # 10 listopad 2021
 
 ## Zajęcia
 
-1.
+1. ### Server-queries
 
-> # 8 listopad 2021
+CRUD - create, read, update, delete
+
+| ---  | Create | Read   | Update    | Delete |
+| ---- | ------ | ------ | --------- | ------ |
+| REST | POST   | GET    | PUT/PATCH | DELETE |
+| SQL  | INSERT | SELECT | UPDATE    | DELETE |
+
+2. ### ENDPOINT
+
+```http
+https://www.gmail.google.com/messages?title=elo&author=noname
+```
+
+- https:// - comunication protocol
+- www - rodzaj zasobu ( pdf )
+- gmail - subdomena
+- google - domena
+- com - część domenty określająca jej typ, typ domeny
+- /messages - endpoint
+- po pytajniku -> zmienne -> title=elo&author=noname ->jeśli chcemy więcej niż jedną zmienną używamy &
+
+---
+
+- GET /books (pobierz wszytskie książki)
+- GET /books/id (/books/2) (pobierz konkretną książkę)
+- POST /books (stworzy nową książkę)
+- PUT /books/id (aktualizujemy cały obiekt)
+- PATCH /books/id (aktualizujemy konkretny obiekt częściowo)
+- DELETE /books/id
+- HEAD /books & /books/id (zwraca nagłównki)
+- OPTIONS - działa na wszystkich endpointach, zwraca dostępne metody http dla danego endpointu
+
+#
+
+> # 17 listopad 2021
 
 ## Zajęcia
-
-
-
-> # 10 listopad 2021
-
-## Zajęcia
-
-1. CRUD
-   put - updatuje cały obiekt
-   patch - updateuje tylko część
-2.
 
 > # 25 listopad 2021
 
@@ -1173,18 +1192,20 @@ doSmth = function(){
 
 1. React - framework i liblary
 2. Component może być funkcją, zwraca w return JSX-HTML
-3. zmienne w JSX piszemy w klamerkach
+3. JSX - JavaScript Extention - specjalna składnia która pozwala nam pisać wewnątrz JS, zmienne w JSX piszemy w klamerkach
+3. a. componenty funkcyjne zwracają JSX, a classowe zwracają JSX poprzez metodę render
 4. Domyślny plik wyjściowy to <App/>
 5. Drzewo komponentów, komponenty wkładane jeden do drugiego
 6. Routing - jakie komponenty będą się wyświetlać np. /contact , na tym endpoincie będą się wyświetlać odpowiednie elementy
-7. Komponenty: dumb, smart. Dumb - stateless, smart - statefull
+7. Komponenty: dumb, smart. Dumb - stateless (nie mają stanu), smart - statefull (mają stan)
 8. Przesyłanie danych odbywa się od rodzica do dziecka przez propsy od góry do dołu
 9. Smart komponenty mają stan, musi spełniać dwie rzeczy, jeśli jest funkcją to musi używać hoocków, a jeśli klasą to mają stan
 10. Props to properties przekazujemy dane za pomocą argumentów w funkcjach, lub w argumentach w treści html?
 11. Context (API) to glabalny stan aplikacji, potem jest state, czyli stan komponentu, każdy komponent ma swój unikalny stan, i na końcu są propsy.
-12. Redux (Flux - ma wiele stanów, Mobx - do zwariowanych wielkich aplikacji) - biblioteka do zarządzania stanem aplikacji, tylko do mega dużych aplikacji
+12. Redux, (Flux - ma wiele stanów, Mobx - do zwariowanych wielkich aplikacji) - biblioteka do zarządzania stanem aplikacji, tylko do mega dużych aplikacji
 13. > Paweł pokazuje diagramy
 14. propsy przekazujemy atrybutami i one zwracają obiekt więc należy je zdestrukturyzować
+15. Destrukturyzacja - tworzenie zmiennych na podstawie obiektów bądź tablic. Defaultową wartość przypisujemy po znaku "=", a zmieniamy nazwę zmiennej (tylko w destrukturyzacji obiektów) po ":".
 
 > # 08 grudzien 2021
 
