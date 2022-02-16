@@ -1263,8 +1263,14 @@ export default Input;
 
 1. React fragment ```<></>``` pozwala zwracać kilka elementów w JSX 
 2. Komunikat "coś tam nie jest funkcją" oznacza, że metoda jest wywołyana na obiekcie, który nie ma takiej metody (należy sprawdzic typ danych)
-3. Gdy funkcjonalność nie działa jak chcemy a apka nie sypie błędami to zapewne są problemy prolemy logiczne, console.log na funkcje czy się wywołuje, nastęnie sprawdź czy parametry są dobrze przekazana i czy mają poprawny typ danych
-4. 
+3. Gdy funkcjonalność nie działa jak chcemy a apka nie sypie błędami to są to problemy logiczne, console.log na funkcje czy się wywołuje, nastęnie sprawdź czy parametry są dobrze przekazana i czy mają poprawny typ danych
+4. filter sprawdza czy warunek jest true i zwraca tablicę z truthy value, if też sprawdza warunek i zwraca false, bądź true.
+```js
+[].length // 0 -> falsy value czyli false
+[1, 2, 3].length // 3 -> truthy value czyli true
+
+if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1], a pole length na tej tablicy ma wartość 2, więc cały warunek if ma wartość true 
+```
 
 #
 
