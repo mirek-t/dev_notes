@@ -1278,6 +1278,23 @@ if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1]
 
 ## Zajęcia
 
+1. next.js narzędzie do budowania stron statycznych i indeksowanych przez google - server site redering
+2. hook, zaczep, zaczepianie się o coś jest koncepcją w całym IT
+3. do zbudowania projektu: 
+- npm init -y
+- npm install react react-dom next
+4. hook useRef służy do złapania referencji w JSX (HTML), nie możemy używać querySelector'a 
+```js
+import {useRef} from "react";
+
+const Component = () => {
+   const stala = useRef(null);
+   
+   return <div ref={stala}></div>;// w tym momencie do stałej przypisywany jest  
+};
+
+export default Component;
+```
 #
 
 > # 08 grudzien 2021
