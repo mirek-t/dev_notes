@@ -1180,32 +1180,99 @@ https://www.gmail.google.com/messages?title=elo&author=noname
 - HEAD /books & /books/id (zwraca nagłównki)
 - OPTIONS - działa na wszystkich endpointach, zwraca dostępne metody http dla danego endpointu
 
+3. json-server path --watch - odpala jason serwer który symuluje backend
+
 #
 
-> # 17 listopad 2021
+> # 17 listopad 2021 - PostMan
 
 ## Zajęcia
+
+#
+
+> # 22 listopad 2021
+
+## Zajęcia
+
+1. Do obsługi znacznika input w React należy użyć useState i obsłużyć zdarzenie w którym zmiemimy stan:
+```js
+import { useState } from "react";
+
+const Input = () => {
+   const [value, setValue] = useState("");
+
+   const inputHandler = (evt) => {
+      setValue(evt.target.value);
+   };
+
+   return (
+      <input type="text" value={value} onChange={inputHandler}/>
+   );
+};
+
+export default Input;
+```
+
+#
 
 > # 25 listopad 2021
 
 ## Zajęcia
 
-1. React - framework i liblary
+1. React - framework i liblary do GUI (graficzny interfejs użytkownika)
 2. Component może być funkcją, zwraca w return JSX-HTML
 3. JSX - JavaScript Extention - specjalna składnia która pozwala nam pisać wewnątrz JS, zmienne w JSX piszemy w klamerkach
 3. a. componenty funkcyjne zwracają JSX, a classowe zwracają JSX poprzez metodę render
-4. Domyślny plik wyjściowy to <App/>
+4. Domyślny plik wyjściowy to ```<App/>```
 5. Drzewo komponentów, komponenty wkładane jeden do drugiego
 6. Routing - jakie komponenty będą się wyświetlać np. /contact , na tym endpoincie będą się wyświetlać odpowiednie elementy
 7. Komponenty: dumb, smart. Dumb - stateless (nie mają stanu), smart - statefull (mają stan)
 8. Przesyłanie danych odbywa się od rodzica do dziecka przez propsy od góry do dołu
 9. Smart komponenty mają stan, musi spełniać dwie rzeczy, jeśli jest funkcją to musi używać hoocków, a jeśli klasą to mają stan
-10. Props to properties przekazujemy dane za pomocą argumentów w funkcjach, lub w argumentach w treści html?
+10. Props to properties przekazujemy dane za pomocą argumentów w komponentach, a odbieramy je za pomocą destrukturyzacji jako argument funkcji
 11. Context (API) to glabalny stan aplikacji, potem jest state, czyli stan komponentu, każdy komponent ma swój unikalny stan, i na końcu są propsy.
 12. Redux, (Flux - ma wiele stanów, Mobx - do zwariowanych wielkich aplikacji) - biblioteka do zarządzania stanem aplikacji, tylko do mega dużych aplikacji
 13. > Paweł pokazuje diagramy
 14. propsy przekazujemy atrybutami i one zwracają obiekt więc należy je zdestrukturyzować
 15. Destrukturyzacja - tworzenie zmiennych na podstawie obiektów bądź tablic. Defaultową wartość przypisujemy po znaku "=", a zmieniamy nazwę zmiennej (tylko w destrukturyzacji obiektów) po ":".
+16. zarządzanie kodem, manipulacja struktury, dzielenie odpowiedzialnością
+
+#
+
+> # 29 listopad 2021
+
+## Powtórka
+
+1. React - biblioteka, freamework do szybkiego tworzenia GUI (graficznego interfejsu użytkownika) - SPA (single page application)
+2. Component to element GUI, jeden klocek, z tych klocków budujemy całe aplikacje. Komponenty są dump (stateless) i smart (statefull)
+3. Entry point defaultowo dla React jest App.js (index.js ładuje pierwszy komponent) - tam gdzie się aplikacja zaczyna
+4. dane przesyłamy tylko z góry na dół w drzewnie komponentów - propsami
+5. Case: kiedy komponent (rodzeństwo) ma zmienić stan w innym komponencie należy użyć funkcji, która będzie zadeklarowana w najbliższym wspólnym rodzicu i wywołać tę funkcję, ona przekarze wynik do każdego komponentu propsami w dół. 
+6. Context API - drugi sposób na przesyłanie danych pomiędzy komponentami w aplikacji, jest to globalny obiekt, który jest dostępny w całej aplikacji, jest prostszy do użycia, za pomocą context API budujemy routing, jeśli coś jest globalne to nie można tego usunąć
+7. useState to hoock który trzyma stan komponentu - jest asynchroniczny
+8. w klasach używa się setState, jest asynchroniczny, nie wykonuje się od razu, klasy mają swoją persystencję
+9. Biblioteki do zarządzania stanem (library state management) - Flux, Redux, Mobx
+10. Vuex to LSM w Vue.j
+11. NgRx to LSM w Angular
+12. Destructuring - destrukturyzacja - tworzenie zmiennych za pomocą danych w tablicach bądź obiektach
+13. react-dom - biblioteka składowa reacta która pozwala budować aplikacje webowe
+14. przy przekazywaniu danych propsami każdy atrybt staje się kluczem w obiekcie i poprzez ten klucz przenozona jest wartość
+15. przy mapowaniu czy jakiejkolwiek pętli musimy używać atrybutu key, z którego korzysta react-dom (algorytm reconsiliation) który tworzy virtual DOM, który działa na różnicach, zmiany są robione wirtualnie w zmiennych, a nastęnie aktualizuje html tylko o te różnice, przez to jest to bardzo optymalne, bo zapytania do drzewa DOM są bardzo kosztowne, a tak zmieniamy tylko to co się zmieniło
+
+## Zajęcia
+
+1. React fragment ```<></>``` pozwala zwracać kilka elementów w JSX 
+2. Komunikat "coś tam nie jest funkcją" oznacza, że metoda jest wywołyana na obiekcie, który nie ma takiej metody (należy sprawdzic typ danych)
+3. Gdy funkcjonalność nie działa jak chcemy a apka nie sypie błędami to zapewne są problemy prolemy logiczne, console.log na funkcje czy się wywołuje, nastęnie sprawdź czy parametry są dobrze przekazana i czy mają poprawny typ danych
+4. 
+
+#
+
+> # 01 grudzień 2021
+
+## Zajęcia
+
+#
 
 > # 08 grudzien 2021
 
