@@ -1280,10 +1280,11 @@ if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1]
 
 1. next.js narzędzie do budowania stron statycznych i indeksowanych przez google - server site redering
 2. hook, zaczep, zaczepianie się o coś jest koncepcją w całym IT
-3. do zbudowania projektu: 
+3. do zbudowania projektu w next'ie: 
 - npm init -y
 - npm install react react-dom next
-4. hook useRef służy do złapania referencji w JSX (HTML), nie możemy używać querySelector'a 
+- folder globalnie "pages", "src", "public"
+4. hook useRef służy do złapania referencji w JSX (HTML), nie możemy używać querySelector'a ,tylko w ostateczności
 ```js
 import {useRef} from "react";
 
@@ -1302,17 +1303,17 @@ export default Component;
 ## Powtorka
 
 1. JS jest dynamicznie typowanym jezykiem - duck typing - jak cos kwacze jak kaczka zachowuje sie jak kaczka to jest to kaczka
-2. jest weak typing, mozemy nadpisac zmienna z number na np. string
+2. jest weak typing, mozemy nadpisac zmienną z number na np. string
 3. TS jest odwrotnie jak JS czyli jest statycznie typowany i strong czyli nie nadpiszemy jej
 4. JS jest single threted
 5. zmianna - kontener w pamieci na dane, mozna przechowywac value lub reference
 6. redelkaracja dotyczy tylko var i tylko w quirks mode (ten drugi to strict)
 7. scope, zasieg, inaczej widoczność, dostęność zmiennych indentyfikatorów. Istnieją zasięgi: funkcyjny, blokowy (globalny)
-8. programowanie funkcyjne - jest oparte na pure function (te same argumenty dadza ten sam wynik), nie moze miec side effect czyli np. zmiennych globalnych, jest higher order function, lazy evaluation, recurion over iteration, referencial transparency
-9. hoc - higher order component
+8. programowanie funkcyjne - wywodzi się z rachunku lambda, jest oparte na pure function (te same argumenty dadza ten sam wynik), nie moze miec side effect czyli np. zmiennych globalnych, jest higher order function (może przyjmować deklarację innej funkcji jako parametr), lazy evaluation (wykonywanie obliczeń dopiero wtedy kiedy jest to potrzebne, generatory tak działają i iteratory), recurcion over iteration (rekurencja to gdy funkcja wywoluje samą siebie, gdzieś musi być warunek, który to przerwie), referencial transparency (gdy zmienimy przypisanie do zmiennej zamias wyniku funkcji taką samą liczbę, nie ma prawa program się wysypać)
+9. hoc - higher order component - wzorzec projektowy (antywzorzec) - komponent, który przyjmuje jako parametr inny komponent i zwraca inny komponent
 10. lazy evaluation - powolne wczytywanie
-11. recurencje mozna zamienic na iteracje
-12. referencial transparency let x = add(); let x = 2; powinno miec
+11. recurencje mozna zamienić na iteracje i odwtornie
+12. referencial transparency, gdy zamiast ```let x = add();``` zrobimy ```let x = 2;``` program nie powinien się wysypać
 13. do zarzadzania stanem uzywamy Flux, Redux, Mobx,
 14. w React do zarzadzania stanem uzywamy
 
@@ -1323,8 +1324,69 @@ export default Component;
 
 15. zeby przeslac propsy do innego komponentu powyzej lub w innej galezi musimy w najblizszym wspolnym komponencie zadeklarowac funkcje, wywolac ja w danym komponencie i ona zmiania wartosc w innym
 16. const [x, y] = useState() - jest to destrukturyzacja tablicy czyli useState zwraca tablice
-17. w React nie uzywamy querySelector bo jest on malo wydajny, bo react tworzy Virtual DOM i poprzez proces Reconcilation JS zwraca roznice pomiedzy stworzonym HTML a tym co ma zwrocic
+17. w React nie uzywamy querySelector bo jest on malo wydajny. React tworzy Virtual DOM i poprzez proces Reconcilation JS oblicza różnice pomiedzy stworzonym HTML a Virtual DOM i zwraca tą rożnicę
+18. funkcje nie są same w sobie persystentne, gdy fn zwróci wartość, garbage collector usówa to co w niej było, zmienne zapiane w pamięci itp., po jej zakończeniu
+19. useState jest funkcją persystentną dlatego, że używa czegoś co nazywa się closure
+20. Next.js służy do tworzenia ston internetowych w reakt, posiada wbudowany routing na endpointy które nazywają się tak samo jak pliki w folderze pages
+21. Komponent App przyjmuje parametr props, który jest obiektem i na jego podstawie destrukturyzujemy ten obiekt i wyciągamy z niego zmienna która jest zapisana pod kluczem
+22. JS jest językiem dynamicznie typowanym, tzn. że nie musimy nadawać typów zmiennym, js rozpoznaje je za pomocą mechanizmu "duck typing"
+23. JS jest miekko typowanym językiem, tzn. ze możemy nadpisywać typy rodzajów danych (weak)
+24. transpilacja (transformacja, kompilacja) - tłumaczenie kodu z jednego języka na inny (TS na JS)
+24. JS jest jednowątkowy (single threated), są od tego odstępstwa, w node.js to jest - webworker (bądź servis worker) do sprawdzenia
+26. filter, map i reduce pochodzą z paradygmatu funkcyjnego 
+27. JS można pisać w wielu paradygmatach, functional programming, objected programming, structural programming
+28. programowanie funkcyjne, functional programming jest oparte na funkcjach, pure functions
+29. pure function - ten sam input daje ten sam output
+30. Algorytm reconsilation - algorytm w React, tworzy kopie prawdziwego HTML'a, który oblicza różnice pomiędzy prawdziwym HTML, a Virtual DOM i zwraca różnice pomiędzy nimi (diff), obliczenia są robione w JS bez zapytań do DOM i dlatego jest to bardziej wydajne, dlatego nie należy używać querySelectora w React
+31. console ma też inne metody poza log, np. dir 
 
 ## Zajecia
 
-1. Closure - dwie funkcje, jedna zwraca deklaracjedrugiej, ta druga korzysta ze zeminnych pierwszej i wtedy ta zmienna zapisuje sie do closure
+1. Closure - dostęp do zmiennych spoza aktualnie wykonywanego zasięgu. Dwie funkcje, jedna zwraca deklaracje drugiej, ta druga korzysta ze zmiennych pierwszej i wtedy ta zmienna zapisuje sie do closure funkcji wewnętrznej
+2. Tworzenie Closure: 
+- Potrzebne 2 fn: outer i inner
+- fn outer musi zwracać deklarację fn inner
+- fn inner musi korzystać z zmiennych, funkcji bądź klas fn outer 
+>Closure do tworzenia unikalnych ID
+```js
+const UUID = (id=0) => {
+   return () => {
+      const result = id;
+      id++;
+      return result;
+   };
+};
+
+const uuid = UUID(123);//do uuid zapisze się deklaracja funkcji UUID i zostanie dopisana zmienna id jako closure do funkcji inner
+
+console.log(uuid());//każde kolejne wykonanie uuid() zwróci liczbę większą o 1 od poprzedniej
+```
+3. site effect powoduje przerenderowanie html, do obsługi używamy useEffect
+4. useEffect jest hookiem, który wywołujemy, pierwszym parametrem jest callback, drugim tablica dependenies, czyli co będzie trigerowało ten efekt. calback może mieć return, który się wykona gdy komponent skończy cykl życia, a w nim może być np. usunięcie addEventListenera gdy go zadeklarujemy w funkcji
+5. clear down - sprzątanie po sobie, usuwanie addEventListener
+6. Global context w React tworzymy: 
+```js
+import React from "react";
+//Komponent z kontekstem
+export const ConfigContext = React.createContext();
+//Obiekt konfiguracyjny przekazywany wszystkim komponentom, wystarczy odebrać w argumentach funkcji destrukturyzując
+const configValue = {
+  darkStyle: true,//jakieś dane (klucz: wartość)
+};
+
+const App = () => {
+  return (
+    <ConfigContext.Provider value={configValue}>
+      <div>Tresć</div>
+    </ConfigContext.Provider>
+  );
+};
+
+export default App;
+```
+#
+
+> # 13 grudzien 2021
+
+## Powtorka
+ 
