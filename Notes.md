@@ -1388,5 +1388,34 @@ export default App;
 
 > # 13 grudzien 2021
 
-## Powtorka
- 
+## Zajęcia
+
+1. Gdy klucz obiektu ma "-" w nazwie, należy je pobierać przez kwadratowe nawiasy
+```js
+const ob = {
+   "key-pair": "string" 
+}
+
+let z = ob["key-pair"]
+```
+ 2. evt.targrt.attributes -> to jest obiekt gdy event emituje np. button
+ 3. Short object notation: gdy klucz i wartość w obiekcie mają taką sama wartość wtedy wystarczy napisać klucz (a domyślnie będzie też wartością)
+ ```js
+ const a = 5;
+ const obj = {
+    a = 5;
+ }
+ //to to samo co:
+ const obj2 = {
+    a //to znaczy to samo co a: a, pierwsza to klucz, druga to zmienna a spoza obiektu
+ }
+ ```
+ 4. next,js żeby zaimportować css do next.js należy stworzyć komponent o nazwie _app.js w folderze pages
+ ```js
+import "../public/static/bootstrap.css";
+import "../public/static/site.css";
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+ ```
