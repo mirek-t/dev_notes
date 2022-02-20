@@ -1369,7 +1369,7 @@ console.log(uuid());//każde kolejne wykonanie uuid() zwróci liczbę większą 
 import React from "react";
 //Komponent z kontekstem
 export const ConfigContext = React.createContext();
-//Obiekt konfiguracyjny przekazywany wszystkim komponentom, wystarczy odebrać w argumentach funkcji destrukturyzując
+//Obiekt konfiguracyjny
 const configValue = {
   darkStyle: true,//jakieś dane (klucz: wartość)
 };
@@ -1383,6 +1383,15 @@ const App = () => {
 };
 
 export default App;
+```
+w komponencie w którym odbieramy wartość tego obiektu (bądź czegokolwiek innego co przekażemy) musimy zaimportować useContext i ConfingContext. Poprzez useContext odebrać te parametry, zapisując je do jakieś zmiennej:
+```js
+import { useContext } from "react";
+import { ConfigContext } from "./App";
+
+const context = useContext(ConfigContext);//tu przekazyjemy zmienne, które zadeklarowaliśmy, że będą dostępne globalnie, tu znajduje się obiekt w tym przypadku
+
+context.darkStyle === false ? ... // użycie -> tu np. jakiś warunek, jak przesyłać inne typy danych?
 ```
 #
 
@@ -1419,3 +1428,11 @@ export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
  ```
+
+ #
+
+> # 15 grudzien 2021
+
+## Zajęcia
+
+1. payload -  useReducer 
