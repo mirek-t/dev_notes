@@ -1428,6 +1428,41 @@ export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
  ```
+ 5. getStaticPropos
+ ```js
+export async function getStaticPropos(){
+    const req = await fetch("/some-api");
+    const smth = await req.json();
+}
+
+    return {
+       props: { smth },
+    }
+```
+6. getServerSideProps
+ ```js
+export async function getServerSideProps(){
+    const req = await fetch("/some-api");
+    const smth = await req.json();
+
+    return {
+       props: { smth },
+    }
+}
+```
+7. getStaticPropos with hydration
+ ```js
+export async function getStaticPropos(){
+    const req = await fetch("/some-api");
+    const smth = await req.json();
+}
+
+    return {
+       props: { smth },
+       revalidate: 30
+    }
+```
+
 
  #
 
