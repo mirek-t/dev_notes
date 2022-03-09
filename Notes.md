@@ -71,7 +71,7 @@
 ## Zajęcia
 
 1. najpopularniejsza wyszukiwarka w Rosji - Yandex
-2. > B\_\_E--M - CSS BEM Block Element and Modifiers -http://getbem.com/introduction/
+2. > B__E--M - CSS BEM Block Element and Modifiers -http://getbem.com/introduction/
 3. CSS reset -> normalize.css - https://necolas.github.io/normalize.css/
 4. > badania od google - przyciski powinny wynosić min chyba width 45px
 5. > Maksymalna szerokość strony 1200px
@@ -314,7 +314,7 @@
 
 #
 
-> # 19 wrzesień 2021 - Zajęcia dodatkowe weekendowe z back-endem
+> # 19 wrzesień 2021 - Zajęcia dodatkowe weekendowe cała grupa
 
 ## Zajęcia
 
@@ -1232,7 +1232,7 @@ export default Input;
 10. Props to properties przekazujemy dane za pomocą argumentów w komponentach, a odbieramy je za pomocą destrukturyzacji jako argument funkcji
 11. Context (API) to glabalny stan aplikacji, potem jest state, czyli stan komponentu, każdy komponent ma swój unikalny stan, i na końcu są propsy.
 12. Redux, (Flux - ma wiele stanów, Mobx - do zwariowanych wielkich aplikacji) - biblioteka do zarządzania stanem aplikacji, tylko do mega dużych aplikacji
-13. > Paweł pokazuje diagramy
+13. > Diagramy aplikacji
 14. propsy przekazujemy atrybutami i one zwracają obiekt więc należy je zdestrukturyzować
 15. Destrukturyzacja - tworzenie zmiennych na podstawie obiektów bądź tablic. Defaultową wartość przypisujemy po znaku "=", a zmieniamy nazwę zmiennej (tylko w destrukturyzacji obiektów) po ":".
 16. zarządzanie kodem, manipulacja struktury, dzielenie odpowiedzialnością
@@ -1269,7 +1269,7 @@ export default Input;
 [].length // 0 -> falsy value czyli false
 [1, 2, 3].length // 3 -> truthy value czyli true
 
-if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1], a pole length na tej tablicy ma wartość 2, więc cały warunek if ma wartość true 
+if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1, 1], a pole length na tej tablicy ma wartość 2, więc cały warunek if ma wartość true 
 ```
 
 #
@@ -1476,18 +1476,17 @@ export async function getStaticPropos(){
 
 > # 07 marzec 2022 - JS ULTIMATE
 
-## JS
-RHS, LHS right left side assignment, left hand side assignment - odczyt i zapis
-
+> RHS, LHS right left side assignment, left hand side assignment - odczyt i zapis
 
 # Javascript
 
 ## Variables
-| x | var | let | const |
-| redeclaration | yes | no | no |
-| reassignment | yes | yes | no |
-| hoisting | yes | no | no |
-| block scope | no | yes | yes |
+x | var | let | const
+--- | --- | --- | ---
+redeclaration | yes | no | no
+reassignment | yes | yes | no
+hoisting | yes | no | no
+block scope | no | yes | yes
 
 ### Hoisting
 
@@ -1536,6 +1535,7 @@ const z;
 const z;
 console.log(z); // SyntaxError: Missing initializer in const declaration
 ```
+
 Hoisting
 ```js
 console.log(x);
@@ -1623,3 +1623,80 @@ d[0][0] = 1000;
 console.log(d); // [ [ 1000, 200 ], [ 3, 4 ] ]
 console.log(a); // [ [ 100, 200 ], [ 3, 4 ] ]
 ```
+
+#
+
+> # 09 marzec 2022
+
+## Zajęcia
+
+- NaN - Not a (correct) Number
+
+## Arrays (object subtype)
+### methods:
+1. '[1, 2, 3].concat([4, 5, 6])' - concat
+2. '[1, 2, 3].includes(2)' - includes (returns true or false) test if element exists in array
+3. '[1, 2, 3, NaN].indexOf(2)' - indexOf (returns index of element or minus 1 if not found) Not working with NaN
+4. '[1, 2, 3].join(', ')' - join (returns string separated by separator)
+5. '[1, 2, 3].pop()' - pop (returns last element and removes it from array)
+6. '[1, 2, 3].push(4)' - push (adds element to the end of array)
+7. '[1, 2, 3].shift()' - shift (returns first element and removes it from array)
+8. '[1, 2, 3].unshift(666)' - unshift (adds element to the beginning of array)
+9. '[1, 2, 3].slice(1, 3)' - slice (returns new array with elements from start to end)
+10. '[1, 2, 3].splice(1, 2)' - splice (returns removed elements and adds new elements in-place)
+11. '[1, 2, 3].reverse()' - reverse (returns new array with elements in reversed order)
+12. '[1, 2, 3].sort()' - sort (returns new array with elements sorted)
+13. '[1, 2, 3].toString()' - toString (returns string representation of array)
+14. '[1, 2, 3].valueOf()' - valueOf (returns array)
+15. '[1, 2, 3].map(x => x * 2)' - map (returns new array with elements transformed by callback) - transform array
+16. '[1, 2, 3].filter(x => x > 1)' - filter (returns new array with elements filtered by callback) - delete elements
+17. '[1, 2, 3].reduce((acc, cur) => acc + cur)' - reduce (returns single value) - sum - aggregate array
+18. '[1, 2, 3].reduceRight((acc, cur) => acc + cur)' - reduceRight (returns single value) - sum - aggregate array
+19. '[1, 2, 3].forEach(x => console.log(x))' - forEach (returns undefined) - iterate array
+20. '[1, 2, 3].some(x => x > 1)' - some (returns true or false) - test if any element passes test
+21. '[1, 2, 3].every(x => x > 1)' - every (returns true or false) - test if all elements pass test
+22. '[1, 2, 3].find(x => x > 1)' - find (returns first element that passes test) - find element
+23. '[1, 2, 3].findIndex(x => x > 1)' - findIndex (returns index of first element that passes test) - find element index
+24. '[1, 2, 3].fill(0, 1, 2)' - fill (returns new array with elements replaced) - replace elements
+25. '[1, 2, 3].copyWithin(1, 2)' - copyWithin (returns new array with elements copied) - copy elements
+26. '[1, 2, 3].entries()' - entries (returns iterator) - iterate array
+27. '[1, 2, 3].keys()' - keys (returns iterator) - iterate array
+28. '[1, 2, 3].values()' - values (returns iterator) - iterate array
+29. '[1, 2, 3].flat()' - flat (returns new array with elements flattened) - flatten array
+30. '[1, 2, 3].flatMap(x => [x, x * 2])' - flatMap (returns new array with elements transformed by callback)
+
+---
+
+#### Copy arrays
+
+```js
+const x = [1, 2, 3];
+
+// shallow copy
+const y = [...x];
+const z = x.slice();
+const w = x.concat();
+const v = Array.from(x);
+
+// deep copy
+const a = JSON.parse(JSON.stringify(x));
+const b = Object.assign([], x);
+```
+
+#### Check if array
+
+```js
+const o = [1,2,3]
+
+typeof(o)// object
+Array.isArry([])// true
+o instanceof Array// true
+```
+
+t[t.length-1] ostatni element z tablicy
+
+#
+
+> # 10 marzec 2022
+
+## Zajęcia
