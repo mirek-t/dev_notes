@@ -1471,6 +1471,31 @@ export async function getStaticPropos(){
 ## Zajęcia
 
 1. payload -  useReducer 
+2. >Ternary operator w skróconej formie: warunek && prawda - (nie ma else)
+3. React props - komponent może posiadać default props object, przekazane propsy nadpiszą defaultowe
+```js
+CompName.defaultProps = {
+   foo: "whatever"
+}
+``` 
+4. React propTypes - zabezpiecza przed użyciem poprawnych danych (tak jak typescript)
+```js
+import PropTypes from "prop-types";
+
+CompName.propTypes = {
+   foo: PropTypes.string.isRequired
+}
+```
+5. style w React możemy przypisać na kilka sposobów:
+- stylesheet, plik css ktory importujemy do komponentu
+- inline style={{backgroundColor: red}}, lowerCamelCase
+- style component, external package
+- by js object, variable, ktory dodajemy jak inline, style={headingStyle}
+```js
+const headingStyle = {
+   color: white;
+}
+```
 
  #
 
@@ -1700,3 +1725,5 @@ t[t.length-1] ostatni element z tablicy
 > # 10 marzec 2022
 
 ## Zajęcia
+
+Transpilacja - konwertowanie jednej wersji jezyka do innej wersji jezyka, najpopularniejsze transpilatory to: babel i typescript ma swój 
