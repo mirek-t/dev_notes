@@ -1727,3 +1727,5 @@ t[t.length-1] ostatni element z tablicy
 ## Zajęcia
 
 Transpilacja - konwertowanie jednej wersji jezyka do innej wersji jezyka, najpopularniejsze transpilatory to: babel i typescript ma swój 
+
+^karet w npm wersjonowaniu paczek w JS oznacza nie starsze niż
