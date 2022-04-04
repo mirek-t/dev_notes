@@ -71,7 +71,7 @@
 ## Zajęcia
 
 1. najpopularniejsza wyszukiwarka w Rosji - Yandex
-2. > B__E--M - CSS BEM Block Element and Modifiers -http://getbem.com/introduction/
+2. > B\_\_E--M - CSS BEM Block Element and Modifiers -http://getbem.com/introduction/
 3. CSS reset -> normalize.css - https://necolas.github.io/normalize.css/
 4. > badania od google - przyciski powinny wynosić min chyba width 45px
 5. > Maksymalna szerokość strony 1200px
@@ -218,7 +218,7 @@
 ## Zajęcia
 
 1.  musisz jak wejdziesz w Network w konsoli odświerzać za każdym razem ctrl+r
-2. >Spisać kroki jakie się robi podczas budowania projektu
+2.  > Spisać kroki jakie się robi podczas budowania projektu
 
 > # 8 wrzesień 2021
 
@@ -228,9 +228,9 @@
 
 ```html
 <select name="wybor" id="wybor">
-   <option value="first">wybor</option>
-   <option value="second">jazda</option>
-   <option value="third">poprzeczka</option>
+  <option value="first">wybor</option>
+  <option value="second">jazda</option>
+  <option value="third">poprzeczka</option>
 </select>
 ```
 
@@ -248,9 +248,9 @@
 ## Powtóka
 
 1.  mapa - tworzenie: nazwa mapy, dwukropek, nawiasy okrągłe i w nich klucz w cudzysłowiach dwukropek wartość, pary są oddzielane przecinkami
-2. repozytorium -> biblioteka kodu
-3. BEM -> Block to odpowiednik Komponentu
-4. czcionki webfonty
+2.  repozytorium -> biblioteka kodu
+3.  BEM -> Block to odpowiednik Komponentu
+4.  czcionki webfonty
 
 ## Zajęcia
 
@@ -345,7 +345,7 @@
 
   MVC - wzorzec projektowy architektoniczny
 
-  | Model  | View | Controller |
+  | Model                               | View                                    | Controller                               |
   | ----------------------------------- | --------------------------------------- | ---------------------------------------- |
   | Dane (struktura danych w aplikacji) | Warstwa prezentacji, jak to ma wyglądać | Logika, czyli co się kiedy powinno dziać |
   | HTML                                | CSS/Sass                                | JavaScript                               |
@@ -427,7 +427,7 @@ data-bs-toggle="modal" data-bs-target="#to-id"
 1. 2015r.
 
 - ES2015 (ES6)
-- ES2021 (ES12) aktualnie najnowsza - wersje wychodzą gdzieś przełom czerwiec/lipiec 
+- ES2021 (ES12) aktualnie najnowsza - wersje wychodzą gdzieś przełom czerwiec/lipiec
 
 2. Język interpretowany z just in time compilation
 
@@ -455,7 +455,7 @@ w2 = 42;
    hoisting | X | 0 | 0
    scope |funkcyjny | blokowy | blokowy
 
->Deklaracja to przypisanie zmiennej miejsca w pamięci (kontenera) np. let x, a inicjalizacja to przypisanie tej zmiennej wartości, np. x = 42;
+> Deklaracja to przypisanie zmiennej miejsca w pamięci (kontenera) np. let x, a inicjalizacja to przypisanie tej zmiennej wartości, np. x = 42;
 
 5. Funkcje:
 
@@ -515,7 +515,7 @@ reduce(acc, cur);
 3. object.classList - zwraca tablicę klas obiektu (elementu DOM)
 4. appendChild(jakaś referencja do html) - x.appendChild(referencja/createElement("div")...etc.) - doda do struktury DOM nowy węzeł
 5. remove() - usunie np. klasę z listy. x.classList.remove("hidden") - usunie klasę "hidden" z tablicy klas danego elementu
-6. evt.target.value - w tym przypadku wartość pola wskazanego przez event np. inputu. 
+6. evt.target.value - w tym przypadku wartość pola wskazanego przez event np. inputu.
 7. evt.preventDefault(); - żeby ne wystęowały w przeglądarce obsługę eventy natywne wbudowane w przeglądarkę - zostaje zablokowana obsługa eventów defaultowych
 8. querySelector można stosowac na węzłąch DOM np. lista.querySelector(""), nie tylko na całym dokumencie
 
@@ -523,13 +523,13 @@ reduce(acc, cur);
 
 > # 13 październik 2021
 
-## Powtóra 
+## Powtóra
 
-1. var ma zasięg funkcyjny czyli ciało funkcji ogranicza jego widoczność, blok nie ogranicza. 
+1. var ma zasięg funkcyjny czyli ciało funkcji ogranicza jego widoczność, blok nie ogranicza.
 2. let ma zasięg blokowy, blok ogranicza jego widoczność
 3. Global Execution Context 00:50:00 wyjaśnienie, stos, kolejka, host, node.js
 4. nawiasy przy funkcji wywołują ją od razu - wywołanie funkcji
-5. nazwa funkcji może skłądać się z liter i cyfr, $, _ (underscore), przy czym nie może zaczynac się od cyfr, pisana lowerCamelCase, musi być czasownikiem bądź akcją
+5. nazwa funkcji może skłądać się z liter i cyfr, $, \_ (underscore), przy czym nie może zaczynac się od cyfr, pisana lowerCamelCase, musi być czasownikiem bądź akcją
 
 ## Zajęcia
 
@@ -550,7 +550,7 @@ wyniekiem jest 15.
 7. Set (new Set([..arrg])) jest typem danych ktore nie powtarza takich samych elementów, zachowuje jeden unikalny. Ma inne metody niz tablica.
 8. Funkcje na symmetrical difference, union, interference tablic 2:50:00
 9. new Date - data w JS jest pobierane z systemu operacyjnego co jest bardzo niebezpieczne
-10. 
+10.
 
 #
 
@@ -560,6 +560,7 @@ wyniekiem jest 15.
 
 1. Tylko 1 use case kiedy możemy używać var w nowoczesnym kodzie: kiedy zasięg blokowy nie wystarcza i potrzebujemy użyć zasięg funkcyjny. Wg. styleguida nie powinno się używać var.
 2. Funkcja to zbiór instrukcji, której celem jest reużywalność. Są 3 funkcje: nazwane, anonimowe, arrow function (też anonimowa). Funkcja anonimowa nie ma nazwy. Deklaracja funkcji wygląda:
+
 ```javascript
 //3 RODZAJE FUNKCJI
 //nazwana
@@ -583,7 +584,9 @@ function (optional_arg){
 //arrow function / fat arrow z implicit return (słowo return domyślnie, brak w składni, jeśli w jednej linijce jest zapisane to też nie trzeba {})
 (optional_arg) => 42; //(value)
 ```
+
 3. argumenty w funkcji: są pozycyjne, wstawiane po przecinku, ilość argumentów: 0+, mają default value (po =), ...rest operator (argumenty przedstawia jako tablicę), istnieje takie coś jak: arguments
+
 ```Java Script
 //arguments
 function elo(){
@@ -599,14 +602,16 @@ elo2(1, 2, 3, "ala")
 //wynikiem console.log będzie tablica z podanymi wartościami jako argumenty
 //[1, 2, 3, "ala"]
 ```
+
 4. Funkcja zwraca undefined jeśli nie przypiszemy czegoś do return
-5. Funkcje zagnieżdżone (domknięcia/clousures), tworzą odmienne środowiska leksykalne. Te funkcje mają dostęp do zmiennych w funkcji je posiadających. Funkcja domykające nie mogą być wywołane samodzielnie. Pozwala to na taką składnie: 
+5. Funkcje zagnieżdżone (domknięcia/clousures), tworzą odmienne środowiska leksykalne. Te funkcje mają dostęp do zmiennych w funkcji je posiadających. Funkcja domykające nie mogą być wywołane samodzielnie. Pozwala to na taką składnie:
+
 ```js
-function x(wartosc1){
-  return function y(wartosc2){
+function x(wartosc1) {
+  return function y(wartosc2) {
     return wartosc1 + wartosc2;
-  }
-};
+  };
+}
 
 console.log(x(8)(2));
 //wynikiem będzie 10;
@@ -615,33 +620,40 @@ let podstawa = x(10);
 console.log(podstawa(5));
 //wynikiem będzie 15;
 ```
-6. Nazwa funkcji przyjmuje pewne zasady i przyjmuje pewne konwencje:
-- pisane lowerCamelCase, musi opisywać czynność bądź być czasownikiem
-- składa się z liter, cyfr, "_" i "$", ale nie może zaczynać się od cyfr
 
+6. Nazwa funkcji przyjmuje pewne zasady i przyjmuje pewne konwencje:
+
+- pisane lowerCamelCase, musi opisywać czynność bądź być czasownikiem
+- składa się z liter, cyfr, "\_" i "$", ale nie może zaczynać się od cyfr
 
 ## Zajęcia
 
 1. Istnieją dwa mode'y w JS: quirks mode, strict mode w JS. Domyślny jest quirks mode. W strict mode var jest nieredeklarowany. Oznacza się na początku pliku gdzie chcemy żeby strict mode zaczął działać i od tego momentu nie wszystkie feature działąją m.in. nie można redeklarować var'a.
->TS (TypeScript) defaultowo działa w Strict Mode i nie ma "tych dziwnych zachowań".
+   > TS (TypeScript) defaultowo działa w Strict Mode i nie ma "tych dziwnych zachowań".
 2. Kyle Simpson - you don't know JS - książka za darmo w necie
    > 3. Stan aplikacji i persysytencja aplikacji (miejsc w przeglądarce jest sporo, czyli miejsc w przeglądarce gdzie możemy zapisywać dane aplikacji)
-3. Application w Konsoli systemowej - tam są przechowywane dane o stanie. Session storage jest automatycznie czyszczone za każdym razem jak zamkniemy kartę w przeglądarce a Local Storage nie jest czyszczony. Cookies będą omawiane przy node.js. 
+3. Application w Konsoli systemowej - tam są przechowywane dane o stanie. Session storage jest automatycznie czyszczone za każdym razem jak zamkniemy kartę w przeglądarce a Local Storage nie jest czyszczony. Cookies będą omawiane przy node.js.
+
 ```js
-localStorage.setItem("klucz", "wartość")//zapisywanie do localStorage
-localStorage.getItem("klucz")//odczytywanie z localStorage
-localStorage.removeItem("klucz")//usówanie jednego itemu z localStorage
-localStorage.clear()//usówanie całego localStorage
+localStorage.setItem("klucz", "wartość"); //zapisywanie do localStorage
+localStorage.getItem("klucz"); //odczytywanie z localStorage
+localStorage.removeItem("klucz"); //usówanie jednego itemu z localStorage
+localStorage.clear(); //usówanie całego localStorage
 ```
+
 4. ternary operator - operator trójkowy -> warunek ? true : false
+
 ```JS
 warunek ? true : false
 ```
+
 5. Pole classList ma takie metody jak add() oraz remove(), które dodają bądź usówanją klasę tagu:
+
 ```js
-x.classList.add("text")
-x.classList.remove("text")
+x.classList.add("text");
+x.classList.remove("text");
 ```
+
 6. - JSON.stringify() - przekształca wartość zmiennej w tekst
    - JSON.parse() - przekształca tekst na to co było wcześniej, np. obiekt, tablice, whatever.
 
@@ -652,11 +664,13 @@ x.classList.remove("text")
 ## Powtórka
 
 1. w standardzie ES6 - ES2015 weszła duża zmiana, doszły let i const; var nie został usunięty ze względu na kompatybilność wsteczną. teraz mamy ES12 - ES2021
-2. przy deklaracji zmiennej powinno się wybierać const'a bo nie można go redeklarować, reinicjalizować i przez to łatwiej debugować kod i jest lepsza wydajność programu. Const jest szybszy od let. Defaultowo jest const, a gdy potrzebujemy reinicjalizacji to wtedy zmieniamy na let. Var tylko gdy potrzebny jest zasięg funkcyjny. Redeklaracja w dużych aplikacjach jest niebezpieczna. 
+2. przy deklaracji zmiennej powinno się wybierać const'a bo nie można go redeklarować, reinicjalizować i przez to łatwiej debugować kod i jest lepsza wydajność programu. Const jest szybszy od let. Defaultowo jest const, a gdy potrzebujemy reinicjalizacji to wtedy zmieniamy na let. Var tylko gdy potrzebny jest zasięg funkcyjny. Redeklaracja w dużych aplikacjach jest niebezpieczna.
 3. Istnieją 2 typy danych: proste (przechowują wartość) i złożone (przechowują referencje do wartości)
+
 - primitive: number, bigInt, string, boolean, symbol, undefined, null - dane proste przechowywane i przekazywane są by value
 - complex: object - dane przechowywane i przekazywane by reference
   object: fn, array, wszystko jest "obudowane" obiektem w JS
+
 4. są 3 typy funkcji w JS: nazwana, anonimowa, arrow function
 
 ## Zajęcia
@@ -685,12 +699,12 @@ x.classList.remove("text")
 - deklaracji klas.
 
 9. local Storage - zapisujemy tylko tekst, nie usówa state'u po zamknięciu przeglądarki, jest podzielony na domeny (przypisany jeden do domeny), daje nam persystencję czyli trwałość
-    > 10. spread operator to co innego niż rest operator
-11. cloneNode(true) - kopiuje strukture danych z wszystkimi poziomami; defaultowo 1 poziom
-12. addEventListener - dodaje obsługe zdarzenia
-13. pętla filter - zwraca true bądź false i odpowiednio to co jest jest przypiane prawdzie
-14. .remove - usówa fizycznie HTML
-15. Reacting progrming - obserwowanie zdarzenia i wysyłanie zapytania tylko wtedy gdy się zmieni wartość (np. do aplikacji typu stock market)
+   > 10. spread operator to co innego niż rest operator
+10. cloneNode(true) - kopiuje strukture danych z wszystkimi poziomami; defaultowo 1 poziom
+11. addEventListener - dodaje obsługe zdarzenia
+12. pętla filter - zwraca true bądź false i odpowiednio to co jest jest przypiane prawdzie
+13. .remove - usówa fizycznie HTML
+14. Reacting progrming - obserwowanie zdarzenia i wysyłanie zapytania tylko wtedy gdy się zmieni wartość (np. do aplikacji typu stock market)
 
 #
 
@@ -706,36 +720,41 @@ x.classList.remove("text")
 6. hostem może być przeglądarka bądź js runtime envinroment (node.js)
    > 7. falsy value => 0, false, undefined, ""; truthy value - każda liczba oprócz 0, true, "jakiś tekst", pusta tablica [] i obiekt {} jest true
    > 8. object destructuring -> const obiekt {x:1,y:2,z:3} -> const {x, y, z} = obiekt; nie trzeba destrukturyzować całego obiektu, można defalutowo dopisywać wartość do zmiennej znakiem "=", można zapisywać wartość klucza do innej nazwy zmiennej po dwukropku, nazwy nie muszą być podawane po kolei
-9. JS jest całkowicie synchroniczny, nie posiada timera, te funkcjonalności dostarcza mu host
-10. DOM API - Document Object Model - obecnie używamy level 3 - to funkcjonalności tj. querySelector(), getElementById(), appendChild()
-11. Istnieje około 60 API z których JS może skorzystać, np. Battery API, Localization API, Payment API (google Pay bądź apple Pay). 
-12. Trailing comma - to przecinek za ostatnią parą w obiekcie, JS to czyta, ale JSON tego nie akceptuje
-13. dodawanie tekstu w JS - document.createTextNode("text")
+7. JS jest całkowicie synchroniczny, nie posiada timera, te funkcjonalności dostarcza mu host
+8. DOM API - Document Object Model - obecnie używamy level 3 - to funkcjonalności tj. querySelector(), getElementById(), appendChild()
+9. Istnieje około 60 API z których JS może skorzystać, np. Battery API, Localization API, Payment API (google Pay bądź apple Pay).
+10. Trailing comma - to przecinek za ostatnią parą w obiekcie, JS to czyta, ale JSON tego nie akceptuje
+11. dodawanie tekstu w JS - document.createTextNode("text")
 
 #
 
 > # 25 październik 2021
 
-## Powtóka 
+## Powtóka
 
 1. JS jest językiem synchronicznym, tzn. jest wykonywana jedna rzecz jednocześnie, instrukcje wykonywane są po kolei. Dopuki jena rzecz się nie wykona to kolejna się nie zacznie. Środowisko uruchomieniowe dodaje asynchroniczność do JS.
-2. JS jest jednowątkowy (można dodać wielowątkowość w jakiś sposób). Na raz wykonuje się tylko jedna rzecz. 
+2. JS jest jednowątkowy (można dodać wielowątkowość w jakiś sposób). Na raz wykonuje się tylko jedna rzecz.
 3. NaN - Not a correct Number - 30/'ala' = NaN
-4. Undefined 
+4. Undefined
+
 ```js
-var x; 
-console.log(x)
-// wynik: undefined; nie zainicjalizowana wartość  
+var x;
+console.log(x);
+// wynik: undefined; nie zainicjalizowana wartość
 ```
-5. Null 
+
+5. Null
+
 ```js
-console.log(x)
+console.log(x);
 // wynik: Null: nie istnieje, nie było deklaracji i zostało wykonane console.log(x)
 ```
+
 6. Symbol - typ danych który ma niepowtarzalne klucze
 7. w obiekcie atrybuty to są zmienne, metody to są funkcje
 8. typowanie w JS jest na zasadzie duck typing: "jeśli coś wygląda jak kaczka, zachowuje się jak kaczka, gdacze jak kaczka to jest to kaczka".
 9. słówko new wywołuje konstrktor klasy budując obiekt
+
 ```js
 let a = 23;
 console.log(typeof(a));//wynik: number
@@ -744,62 +763,68 @@ console.log(b)://wynik: object
 console.log(a==b);//true
 console.log(a===b);//false
 ```
+
 10. dot notation vs. kwadratowe nawiasy - notacja wyciągania zmiennych obiektu po kluczu
 
 ```js
 const f = {
   name: "x-men",
-  age: 18
-}
+  age: 18,
+};
 
-const secret = 'name';
+const secret = "name";
 
-console.log(f.name);//x-men
-console.log(f["name"]);//x-men
-console.log(f[secret]);//x-men
+console.log(f.name); //x-men
+console.log(f["name"]); //x-men
+console.log(f[secret]); //x-men
 ```
 
 ## Zajęcia
 
-1. casting - nazwa procesu zamiany rodzaju typu danych jakiejś zmiennej (przy temacie truthy/falsy value); coercion (koercja) - jest tym samym procesem ale bez naszej ingerencji - sama się zmienia - w JS jest to dozwolone, aczkolwiek jeśli określamy jakiś typ danych to nie chcemy, żeby ona się w trakcie działania programu zmieniała.  
+1. casting - nazwa procesu zamiany rodzaju typu danych jakiejś zmiennej (przy temacie truthy/falsy value); coercion (koercja) - jest tym samym procesem ale bez naszej ingerencji - sama się zmienia - w JS jest to dozwolone, aczkolwiek jeśli określamy jakiś typ danych to nie chcemy, żeby ona się w trakcie działania programu zmieniała.
 2. jeżeli klucz i wartość są takie same to nie potrzeba pisać obu ale tylko jedną nazwe czyli ala: 'ala' to piszemy tylko ala.
 3. indexOf() - zwraca index tablicy na jakim miejscu jest podany w argumentach element.
 4. splice(id, 1) - usówa z tablicy wartości od podanej i ile elementów z koleii.
 5. parseInt(x, redix) - redix - system liczbowy w jakim ma być przekształcona liczba. parseInt przyjmuje dwa parametry
+
 ```js
-['10', '10', '10'].map(parseInt);
+["10", "10", "10"].map(parseInt);
 // wynik: [10, NaN, 2]
 //pierwszym parametrem parse int przyjął od tablicy jest przekazane przez metodę map wartość i druga index czyli parseInt(10, 0), ponieważ system zerowy i jedynkowy nieistnieją w pierwszysm przypadku funkcja przyjmuje automatycznie system dziesiętny, w drugim przypadku zwraca NaN, a w 3 10 w systemie dwójkowym wynosi 2.
-//powinno być: 
-['10', '10', '10'].map(item => parseInt(item));
+//powinno być:
+["10", "10", "10"].map((item) => parseInt(item));
 //wtedy przekazujemy tylko jeden argument:
 ```
+
 6. Boolean() - konstruktor klasy Boolean który zwraca czy wartość jest true or false
+
 ```js
 const truthy = [0, 0.0, false, NaN, undefined, {}, [], ""];
 truthy.filter(Boolean);
 //zwraca tylko truthy value
-truthy.filter(item => !Boolean(item));
+truthy.filter((item) => !Boolean(item));
 //zwróci tylko falsy value
 ```
+
 7. caniuse.com -> do sprawdzania czy featury będą działać w przeglądarkach, webpack sam sprawdza i transpiluje do odpowiedniego kodu
 8. Destrukturyzacja - tworzenie zmiennych na podstawie klucza i wartości zawartych w obiekcie, odwołujemy się po kluczu do obiektu i inicjalizujemy wartość przypisaną kluczowi.
+
 ```js
 //destrukturyzacja
 const config = {
   a: 1,
-  b: 2
+  b: 2,
 };
 
 const uration = {
-  b : 3,
-  d : 4
-}
+  b: 3,
+  d: 4,
+};
 
 // console.log(uration);
 
-const {a, b} = config;
-const {c, d} = uration;
+const { a, b } = config;
+const { c, d } = uration;
 
 // console.log(a);
 // console.log(b);
@@ -807,7 +832,7 @@ const {c, d} = uration;
 // console.log(d);
 
 //Spread operator of object
-const configuration = {...config, ...uration}
+const configuration = { ...config, ...uration };
 
 console.log(configuration);
 ```
@@ -819,108 +844,132 @@ console.log(configuration);
 ## Zajęcia
 
 1. Kiedy kod jest wykonywany to mówimy, że jest w RunTime
-2. Kiedy jest w Compilation Time tzn. jest w trybie developmentu - pisania. 
+2. Kiedy jest w Compilation Time tzn. jest w trybie developmentu - pisania.
 3. JS jest dynamicznie typowany (nie określamy typu danych -> jest określany w RunTime) - system do określania typów danych to "Duck Typing"
 4. JS jest weak typing (możemy zmieniać typy danych np. z string na number)
+
 ```js
 let x = 42;
-x = 'ala';
-console.log(x);//'ala'
+x = "ala";
+console.log(x); //'ala'
 ```
+
 5. JS jest singlethreaded - jednowątkowy, zwiększanie wydajności jest słąbe
-6. Webassembly - specjalna funkcjonalność hosta pozwalająca uruchamiać inne języki programowania w przeglądarce, na razie tylko języki które mają wbudowany garbage collector mogą być uruchamiane, ale trwają prace nad dodaniem innych języków jak phyton 
+6. Webassembly - specjalna funkcjonalność hosta pozwalająca uruchamiać inne języki programowania w przeglądarce, na razie tylko języki które mają wbudowany garbage collector mogą być uruchamiane, ale trwają prace nad dodaniem innych języków jak phyton
 7. Garbage Collector - odśmieca, JS ma wbudowany automatyczny garbage collector
 8. W React jest "Tree shacking" - oczyszcza kod
 9. moduły w ES Modules - funkcjonalność JS do dzielenia aplikacji na pliki:
-- są pisane w Strickt Mode,  
+
+- są pisane w Strickt Mode,
 - w html musi być w scrypcie dopisane: type="module"
 - są singleton -> wzorzec projektowy, design pattern, oznacza, że możemy mieć tylko jedną instancję danego modułu
-10. funkcje: 
+
+10. funkcje:
+
 - declaration 1+ (punkt 11.)
 - execution (wywołanie) 0+
+
 11. Można redeklarować funkcje:
+
 ```js
 // od tego miejsca funkcja x ma pustą deklaracje
-function x(){};
+function x() {}
 x();
 // od tego już jest wykonywane dodawanie, działa już inaczej niż poprzednio
-function x(){return 1+1};
+function x() {
+  return 1 + 1;
+}
 x();
 ```
+
 12. Tworzenie eventów, poglądowo jak wywołujemy funkcje na rzecz obiektu:
+
 ```js
 const event = new Event("build");
 
 let e = {
-   addEventListener: (type, cb) => {
-      if (type === "build") {
-         this.e = callback;
-      }
-   },
-   callback: undefined,
-   dispatchEvent: (evt) => {
-      if (this.callback !== undefined) {
-         this.callback();
-      } else {
-         console.log("undefined is not a function")
-      }
-   }
+  addEventListener: (type, cb) => {
+    if (type === "build") {
+      this.e = callback;
+    }
+  },
+  callback: undefined,
+  dispatchEvent: (evt) => {
+    if (this.callback !== undefined) {
+      this.callback();
+    } else {
+      console.log("undefined is not a function");
+    }
+  },
 };
 
 e.addEventListener("build", () => console.log("it works"));
 
 setInterval(() => {
-   e.dispatchEvent(event);
-}, 500);// co 0,5s będzie wywoływany callback 
+  e.dispatchEvent(event);
+}, 500); // co 0,5s będzie wywoływany callback
 ```
+
 13. This - kontekst w JS (leksykalny bądź dynamicznie bindowany) - kontekst programu, nie jest stały, zależy jak został wykonany, tak się zachowuje
 14. Destructuring - stworzenie zmiennych na podstawie obiektu, tabicy
-15. Wszytstkie języki obiektowe (phyton, java) są tak zbudowane, że typy danych są reprezentowane "opakowane" jako obiekt, który może posiadać swoje atrybuty i metody. Poniżej funkcja, która jest obiektem i ma swoje pole i metodę. 
+15. Wszytstkie języki obiektowe (phyton, java) są tak zbudowane, że typy danych są reprezentowane "opakowane" jako obiekt, który może posiadać swoje atrybuty i metody. Poniżej funkcja, która jest obiektem i ma swoje pole i metodę.
+
 ```js
 function add() {
-   return 42;
-};
+  return 42;
+}
 
-add.secret = "secret jest polem obiektu, czyli zmienną w obiekcie zapisaną pod kluczem secret, a jej wartość to ten tekst"
-add.doSmth = () => console.log('It works');
+add.secret =
+  "secret jest polem obiektu, czyli zmienną w obiekcie zapisaną pod kluczem secret, a jej wartość to ten tekst";
+add.doSmth = () => console.log("It works");
 
 add();
 console.log(add.secret);
 add.doSmth();
 ```
+
 16. W destrukturyzacji tablic wymyślamy nazwy zmiennych, dlatego nie ma możliwości zmiany nazw w destrukturyzacji
+
 ```js
 const x1 = [1, 2, 3, 4];
 const [first, second, ...left] = x1;
 // to to samo co:
 //const first = x1[0];
 //const second = x1[1];
-//const left = [x1[2], x1[3]], i wszystki pozostałe które będą w tablicy 
+//const left = [x1[2], x1[3]], i wszystki pozostałe które będą w tablicy
 ```
+
 17. CommonJS - najbardziej popularny system modułów w JS, pochodzi z Node.js. Ekwiwalentem słowa import jest require, a export używa się w troche inny sposób
-18.  metadane są potrzebne przeglądarce do renderingu. W sekcji head w html: 
+18. metadane są potrzebne przeglądarce do renderingu. W sekcji head w html:
+
 ```html
-<meta name="vieport" content="width=device-width, initial-scale=1.0" /> 
+<meta name="vieport" content="width=device-width, initial-scale=1.0" />
 <!-- bez tej linijki nie zadziała responyswność -->
 ```
+
 19. metoda tablicy indexOf ma wadę w postaci nie wyszukuje NaN, tzn jeśli w tablicy jest wartość NaN to indexOf zwróci -1. Żeby określić czy NaN jest wartością w tablicy należy użyć metody includes(NaN)
+
 ```js
-[1,2,3,NaN].indexOf(NaN);
+[1, 2, 3, NaN].indexOf(NaN);
 //log  : -1
-[1,2,3,NaN].includes(NaN);
+[1, 2, 3, NaN].includes(NaN);
 //log : true
 ```
+
 20. metoda splice zwraca wartości w tablicy które usunęła
+
 ```js
-const y = [1,2,3,4,5].splice(3,2);//1. parametr od którego indexu tablicy ma zacząc, 2. parametr to ile elementów ma usunąć
-console.log(y);//log [4,5]
+const y = [1, 2, 3, 4, 5].splice(3, 2); //1. parametr od którego indexu tablicy ma zacząc, 2. parametr to ile elementów ma usunąć
+console.log(y); //log [4,5]
 ```
+
 21. Legacy code - stary kod pisany bez dobrych praktyk (kod napisany prez kogoś innego)
 22. state aplikacji nie może byc globalne, przypadkowe funkcje nie moga go używać oprócz jego metod
 23. refaktoryzacja - poprawianie kodu
-24. Test-driven development - technika tworzenia oprogramowania opiera się na 3 zasadach, programista pisze test, który na początku nie ma prawa sie wykonać, nastęnie implementuje ten kod i nka ońcu refaktoryzuje do istniejących stndardów: 
-24. Test-driven development - technika tworzenia oprogramowania opiera się na 3 zasadach, programista pisze test, który na początku nie ma prawa sie wykonać, nastęnie implementuje ten kod i na końcu refaktoryzuje do istniejących stndardów: 
-- test 
+24. Test-driven development - technika tworzenia oprogramowania opiera się na 3 zasadach, programista pisze test, który na początku nie ma prawa sie wykonać, nastęnie implementuje ten kod i nka ońcu refaktoryzuje do istniejących stndardów:
+25. Test-driven development - technika tworzenia oprogramowania opiera się na 3 zasadach, programista pisze test, który na początku nie ma prawa sie wykonać, nastęnie implementuje ten kod i na końcu refaktoryzuje do istniejących stndardów:
+
+- test
 - kod (minimalna implementacja, która spełnia test)
 - refaktoryzacja (poprawienie kodu)
 
@@ -933,6 +982,7 @@ console.log(y);//log [4,5]
 ### History of asynchronous
 
 1. Callback - function - wykonuje się gdy coś się stanie, np. zostanie wyemitowany event, który jest obsługiwany (callback hell)
+
 ```js
 const boxRef = document.getElementById("box");
 let counter = 0;
@@ -942,7 +992,7 @@ const interval = setInterval(() => {
   boxRef.style.left = counter + "px";
 }, 200);
 
-// console.log(counter); //log: 0 - to jest kod synchrnoiczny wykonuje się przed asynchronicznym 
+// console.log(counter); //log: 0 - to jest kod synchrnoiczny wykonuje się przed asynchronicznym
 
 setTimeout(() => {
   clearInterval(interval);
@@ -958,15 +1008,18 @@ setTimeout(() => {
   }, 2000);
 }, 2000);
 ```
+
 2. Promise - od 2015r
+
 - zapytanie asynchroniczne do serwera - AJAX - asynchronous javascript and xml (xml -> extended markup language)
 - JSON - js object notation
+
 ```js
 //użycie featch, który jest promise based
 fetch("http://api.nbp.pl/api/exchangerates/tables/a/?format=json")
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((error) => console.log(error));
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((error) => console.log(error));
 //stworzenie Promise'a
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -982,13 +1035,14 @@ p1.then((message) => {
   console.log(message);
 }).catch((error) => console.log(error));
 ```
+
 3. Generatory - potrafią zamrażać stan funkcji, wywołuje się je metodą next(), mogą zamrażać się wewnątrz linijki kodu, yield zwraca wartość i zamraża się w danym yieldzie, couroutine (coro) -> współprogram (kiedy generator przyjmuje parametry przekazane do niego jako argument metody next(42).). W zwykłaj funkcji po wykonaniu i zwróceniu wyniku garbage collector niszczy stan funkcji, w generatorach jest on niszczony po ostatnim wykonaniu. Generatory są lazy evaluated - tzn. obliczniea sa wykonywane dopiero na żądanie, gdy poprosimy generator o ich wykonanie, tzn. wywołanie generatora nic nie zwraca dopiero yield. Możemy mieć wiele instancji jednego generatora i w różnych momentach zużywać jego zasoby niezależnie. Generatory trzeba zainstancjonować (stworzyć instancję poprzez przypisaneie generatora do jakiejś zmniennej)
 
 ```js
 function add(a, b) {
   return a + b;
 }
-add(2, 4);// ponieważ to jest zwykła funkcja to garbage collector usunie jej stan zaraz po wykonaniu i zwróceniu wartości
+add(2, 4); // ponieważ to jest zwykła funkcja to garbage collector usunie jej stan zaraz po wykonaniu i zwróceniu wartości
 
 function* gen() {
   console.log("1 elo");
@@ -1002,10 +1056,10 @@ function* gen() {
 
 const g = gen();
 
-console.log(g.next());//{value: 1, done: false}
-console.log(g.next());//{value: 2, done: false}
-console.log(g.next());//{value: 3, done: false}
-console.log(g.next());//{value: undefined, done: true}
+console.log(g.next()); //{value: 1, done: false}
+console.log(g.next()); //{value: 2, done: false}
+console.log(g.next()); //{value: 3, done: false}
+console.log(g.next()); //{value: undefined, done: true}
 
 function* infiniteLoop() {
   let counter = 0;
@@ -1037,31 +1091,35 @@ console.log(g.next());
 console.log(g.next(42));
 console.log(g.next());
 ```
----
-```js
-const k =function* (){
-   let counter = 0;
 
-   while (true) {
-      yield counter;
-      counter++;
-   }
-}
+---
+
+```js
+const k = function* () {
+  let counter = 0;
+
+  while (true) {
+    yield counter;
+    counter++;
+  }
+};
 
 const g = k(); //instancja generatora
 
 const interval = setInterval(() => {
-   const result = g.next();
-   console.log(result); 
+  const result = g.next();
+  console.log(result);
 
-   if (result.value > 10) {
-      clearInterval(interval);// możemy go tu usunąć bo zmienna jest tu widoczna
-   }
+  if (result.value > 10) {
+    clearInterval(interval); // możemy go tu usunąć bo zmienna jest tu widoczna
+  }
 }, 500);
 ```
+
 4. Async/Await
 
 ### EDD - event driven development
+
 - programowanie oparte na zdarzeniach, gdy sa jakies ingerencje, zdarzenia
 - reactiv programing (programowanie oparte na zmianie streamow) - np. Netflix (3 streamy) - data stream (paczka RxJs do pracy ze streamami)
 
@@ -1071,20 +1129,21 @@ const interval = setInterval(() => {
 
 ## Ogólne info
 
-1. ----
+1. ***
 
 > # 8 listopad 2021
 
 ## Powtórka
 
 1. Scope - przenoszenie deklaracji zmiennej var, deklaracji funkcji i deklaracji klas na górę aktualnie przetwarzanego zasięgu (w quirks mode).
+
 ```js
 //Hoisting, działa tak, że kod napisany w ten sposób:
-var x= 42;
+var x = 42;
 
-function doSmth(){
-   console.log(y);
-   var y =42;
+function doSmth() {
+  console.log(y);
+  var y = 42;
 }
 
 console.log(doSmth());
@@ -1092,53 +1151,59 @@ console.log(doSmth());
 //po hoistingu będzie wyglądał następująco dla interpretera
 var x;
 
-function doSmth(){
-   var y;
-   console.log(y);
-   y =42;
+function doSmth() {
+  var y;
+  console.log(y);
+  y = 42;
 }
 
-x= 42;
+x = 42;
 
 console.log(doSmth());
 ```
+
 ---
+
 ```js
 const x = 0;
 
-if (0){ //warunek jest fałszem, blok sie nie wykonuje, ale var ma zasięg funkcyjny dlatego klamerki go nieograniczają
-   var y = 666;
-   let z = 665;
+if (0) {
+  //warunek jest fałszem, blok sie nie wykonuje, ale var ma zasięg funkcyjny dlatego klamerki go nieograniczają
+  var y = 666;
+  let z = 665;
 }
 
-console.log(y);// undefined, deklaracja przeniesiona na górę całego zasięgu
-console.log(z);// błąd, nie ma takiej zmiennej 
+console.log(y); // undefined, deklaracja przeniesiona na górę całego zasięgu
+console.log(z); // błąd, nie ma takiej zmiennej
 ```
+
 ---
+
 ```js
 //hoisting wyrażeń funkcyjnych
 doSmth();
 
-var doSmth = function(){
-   console.log("I don't think so");
+var doSmth = function () {
+  console.log("I don't think so");
 };
 // po hoistingu kod wygląda tak
 var doSmth;
 
-doSmth();//doSmth is not a function
+doSmth(); //doSmth is not a function
 
-doSmth = function(){
-   console.log("I don't think so");
+doSmth = function () {
+  console.log("I don't think so");
 };
 ```
+
 2. Async-Await jest to funkcjonalność JS, a dokładniej jest to sytactic sugar - lukier składnowy dlaczegoś co już istnieje (w tym przypadku dla promisa i generatora razem)
 3. promise tworzymy za pomocą słowa kluczowego wywołując konstruktor new Promise, on przyjmuje jako parametr deklaracje funkcji, która z kolei ma dwa parametry - dwie funkcje (resolve, reject), które w zależności czy zapytanie dostanie najpierw odpowiedź bądź zwróci error wywoła się jako pierwsza, a ta druga nie zostanie wywołana
 4. resolve obsługujemy metodą .then, a reject obsługujemy metodą .catch
-5. generatory tworzymy za pomoą słowa kluczowego function*, w środku musi mieć yield który jest zamrażany. pętle nieskończoną tworzymy za pomocą while (true)
+5. generatory tworzymy za pomoą słowa kluczowego function\*, w środku musi mieć yield który jest zamrażany. pętle nieskończoną tworzymy za pomocą while (true)
 6. generator musimy zainstancjonować, potem wywołujemy za pomocą metody .next() -> każdy kolejny yield
 7. setInterval w asynchroniczności musimy przpisać do zmiennej bo tylko wtedy jesteśmy w stanie usunąć jego dzialanie funkcją clearInterval(taZmienna)
 8. fetch jest promis based i defaultowo robi get i pobiera dane
-9. >Design pattern - najlepsze rozwiązanie istniejącego problemu programistycznego - np. subscriber observer
+9. > Design pattern - najlepsze rozwiązanie istniejącego problemu programistycznego - np. subscriber observer
 
 #
 
@@ -1195,19 +1260,18 @@ https://www.gmail.google.com/messages?title=elo&author=noname
 ## Zajęcia
 
 1. Do obsługi znacznika input w React należy użyć useState i obsłużyć zdarzenie w którym zmiemimy stan:
+
 ```js
 import { useState } from "react";
 
 const Input = () => {
-   const [value, setValue] = useState("");
+  const [value, setValue] = useState("");
 
-   const inputHandler = (evt) => {
-      setValue(evt.target.value);
-   };
+  const inputHandler = (evt) => {
+    setValue(evt.target.value);
+  };
 
-   return (
-      <input type="text" value={value} onChange={inputHandler}/>
-   );
+  return <input type="text" value={value} onChange={inputHandler} />;
 };
 
 export default Input;
@@ -1222,20 +1286,20 @@ export default Input;
 1. React - framework i liblary do GUI (graficzny interfejs użytkownika)
 2. Component może być funkcją, zwraca w return JSX-HTML
 3. JSX - JavaScript Extention - specjalna składnia która pozwala nam pisać wewnątrz JS, zmienne w JSX piszemy w klamerkach
-3. a. componenty funkcyjne zwracają JSX, a classowe zwracają JSX poprzez metodę render
-4. Domyślny plik wyjściowy to ```<App/>```
-5. Drzewo komponentów, komponenty wkładane jeden do drugiego
-6. Routing - jakie komponenty będą się wyświetlać np. /contact , na tym endpoincie będą się wyświetlać odpowiednie elementy
-7. Komponenty: dumb, smart. Dumb - stateless (nie mają stanu), smart - statefull (mają stan)
-8. Przesyłanie danych odbywa się od rodzica do dziecka przez propsy od góry do dołu
-9. Smart komponenty mają stan, musi spełniać dwie rzeczy, jeśli jest funkcją to musi używać hoocków, a jeśli klasą to mają stan
-10. Props to properties przekazujemy dane za pomocą argumentów w komponentach, a odbieramy je za pomocą destrukturyzacji jako argument funkcji
-11. Context (API) to glabalny stan aplikacji, potem jest state, czyli stan komponentu, każdy komponent ma swój unikalny stan, i na końcu są propsy.
-12. Redux, (Flux - ma wiele stanów, Mobx - do zwariowanych wielkich aplikacji) - biblioteka do zarządzania stanem aplikacji, tylko do mega dużych aplikacji
-13. > Diagramy aplikacji
-14. propsy przekazujemy atrybutami i one zwracają obiekt więc należy je zdestrukturyzować
-15. Destrukturyzacja - tworzenie zmiennych na podstawie obiektów bądź tablic. Defaultową wartość przypisujemy po znaku "=", a zmieniamy nazwę zmiennej (tylko w destrukturyzacji obiektów) po ":".
-16. zarządzanie kodem, manipulacja struktury, dzielenie odpowiedzialnością
+4. a. componenty funkcyjne zwracają JSX, a classowe zwracają JSX poprzez metodę render
+5. Domyślny plik wyjściowy to `<App/>`
+6. Drzewo komponentów, komponenty wkładane jeden do drugiego
+7. Routing - jakie komponenty będą się wyświetlać np. /contact , na tym endpoincie będą się wyświetlać odpowiednie elementy
+8. Komponenty: dumb, smart. Dumb - stateless (nie mają stanu), smart - statefull (mają stan)
+9. Przesyłanie danych odbywa się od rodzica do dziecka przez propsy od góry do dołu
+10. Smart komponenty mają stan, musi spełniać dwie rzeczy, jeśli jest funkcją to musi używać hoocków, a jeśli klasą to mają stan
+11. Props to properties przekazujemy dane za pomocą argumentów w komponentach, a odbieramy je za pomocą destrukturyzacji jako argument funkcji
+12. Context (API) to glabalny stan aplikacji, potem jest state, czyli stan komponentu, każdy komponent ma swój unikalny stan, i na końcu są propsy.
+13. Redux, (Flux - ma wiele stanów, Mobx - do zwariowanych wielkich aplikacji) - biblioteka do zarządzania stanem aplikacji, tylko do mega dużych aplikacji
+14. > Diagramy aplikacji
+15. propsy przekazujemy atrybutami i one zwracają obiekt więc należy je zdestrukturyzować
+16. Destrukturyzacja - tworzenie zmiennych na podstawie obiektów bądź tablic. Defaultową wartość przypisujemy po znaku "=", a zmieniamy nazwę zmiennej (tylko w destrukturyzacji obiektów) po ":".
+17. zarządzanie kodem, manipulacja struktury, dzielenie odpowiedzialnością
 
 #
 
@@ -1247,7 +1311,7 @@ export default Input;
 2. Component to element GUI, jeden klocek, z tych klocków budujemy całe aplikacje. Komponenty są dump (stateless) i smart (statefull)
 3. Entry point defaultowo dla React jest App.js (index.js ładuje pierwszy komponent) - tam gdzie się aplikacja zaczyna
 4. dane przesyłamy tylko z góry na dół w drzewnie komponentów - propsami
-5. Case: kiedy komponent (rodzeństwo) ma zmienić stan w innym komponencie należy użyć funkcji, która będzie zadeklarowana w najbliższym wspólnym rodzicu i wywołać tę funkcję, ona przekarze wynik do każdego komponentu propsami w dół. 
+5. Case: kiedy komponent (rodzeństwo) ma zmienić stan w innym komponencie należy użyć funkcji, która będzie zadeklarowana w najbliższym wspólnym rodzicu i wywołać tę funkcję, ona przekarze wynik do każdego komponentu propsami w dół.
 6. Context API - drugi sposób na przesyłanie danych pomiędzy komponentami w aplikacji, jest to globalny obiekt, który jest dostępny w całej aplikacji, jest prostszy do użycia, za pomocą context API budujemy routing, jeśli coś jest globalne to nie można tego usunąć
 7. useState to hoock który trzyma stan komponentu - jest asynchroniczny
 8. w klasach używa się setState, jest asynchroniczny, nie wykonuje się od razu, klasy mają swoją persystencję
@@ -1261,15 +1325,16 @@ export default Input;
 
 ## Zajęcia
 
-1. React fragment ```<></>``` pozwala zwracać kilka elementów w JSX 
+1. React fragment `<></>` pozwala zwracać kilka elementów w JSX
 2. Komunikat "coś tam nie jest funkcją" oznacza, że metoda jest wywołyana na obiekcie, który nie ma takiej metody (należy sprawdzic typ danych)
 3. Gdy funkcjonalność nie działa jak chcemy a apka nie sypie błędami to są to problemy logiczne, console.log na funkcje czy się wywołuje, nastęnie sprawdź czy parametry są dobrze przekazana i czy mają poprawny typ danych
 4. filter sprawdza czy warunek jest true i zwraca tablicę z truthy value, if też sprawdza warunek i zwraca false, bądź true.
-```js
-[].length // 0 -> falsy value czyli false
-[1, 2, 3].length // 3 -> truthy value czyli true
 
-if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1, 1], a pole length na tej tablicy ma wartość 2, więc cały warunek if ma wartość true 
+```js
+[].length[(1, 2, 3)].length; // 0 -> falsy value czyli false // 3 -> truthy value czyli true
+
+if ([1, 1, 3].filter((item) => item === 1).length) {
+} // wynikiem filtra jest [1, 1], a pole length na tej tablicy ma wartość 2, więc cały warunek if ma wartość true
 ```
 
 #
@@ -1280,22 +1345,26 @@ if ([1, 1, 3].filter(item => item === 1).length) {}; // wynikiem filtra jest [1,
 
 1. next.js narzędzie do budowania stron statycznych i indeksowanych przez google - server site redering
 2. hook, zaczep, zaczepianie się o coś jest koncepcją w całym IT
-3. do zbudowania projektu w next'ie: 
+3. do zbudowania projektu w next'ie:
+
 - npm init -y
 - npm install react react-dom next
 - folder globalnie "pages", "src", "public"
+
 4. hook useRef służy do złapania referencji w JSX (HTML), nie możemy używać querySelector'a ,tylko w ostateczności
+
 ```js
-import {useRef} from "react";
+import { useRef } from "react";
 
 const Component = () => {
-   const stala = useRef(null);
-   
-   return <div ref={stala}></div>;// w tym momencie do stałej przypisywany jest  
+  const stala = useRef(null);
+
+  return <div ref={stala}></div>; // w tym momencie do stałej przypisywany jest
 };
 
 export default Component;
 ```
+
 #
 
 > # 08 grudzien 2021
@@ -1313,7 +1382,7 @@ export default Component;
 9. hoc - higher order component - wzorzec projektowy (antywzorzec) - komponent, który przyjmuje jako parametr inny komponent i zwraca inny komponent
 10. lazy evaluation - powolne wczytywanie
 11. recurencje mozna zamienić na iteracje i odwtornie
-12. referencial transparency, gdy zamiast ```let x = add();``` zrobimy ```let x = 2;``` program nie powinien się wysypać
+12. referencial transparency, gdy zamiast `let x = add();` zrobimy `let x = 2;` program nie powinien się wysypać
 13. do zarzadzania stanem uzywamy Flux, Redux, Mobx,
 14. w React do zarzadzania stanem uzywamy
 
@@ -1332,46 +1401,50 @@ export default Component;
 22. JS jest językiem dynamicznie typowanym, tzn. że nie musimy nadawać typów zmiennym, js rozpoznaje je za pomocą mechanizmu "duck typing"
 23. JS jest miekko typowanym językiem, tzn. ze możemy nadpisywać typy rodzajów danych (weak)
 24. transpilacja (transformacja, kompilacja) - tłumaczenie kodu z jednego języka na inny (TS na JS)
-24. JS jest jednowątkowy (single threated), są od tego odstępstwa, w node.js to jest - webworker (bądź servis worker) do sprawdzenia
-26. filter, map i reduce pochodzą z paradygmatu funkcyjnego 
+25. JS jest jednowątkowy (single threated), są od tego odstępstwa, w node.js to jest - webworker (bądź servis worker) do sprawdzenia
+26. filter, map i reduce pochodzą z paradygmatu funkcyjnego
 27. JS można pisać w wielu paradygmatach, functional programming, objected programming, structural programming
 28. programowanie funkcyjne, functional programming jest oparte na funkcjach, pure functions
 29. pure function - ten sam input daje ten sam output
 30. Algorytm reconsilation - algorytm w React, tworzy kopie prawdziwego HTML'a, który oblicza różnice pomiędzy prawdziwym HTML, a Virtual DOM i zwraca różnice pomiędzy nimi (diff), obliczenia są robione w JS bez zapytań do DOM i dlatego jest to bardziej wydajne, dlatego nie należy używać querySelectora w React
-31. console ma też inne metody poza log, np. dir 
+31. console ma też inne metody poza log, np. dir
 
 ## Zajecia
 
 1. Closure - dostęp do zmiennych spoza aktualnie wykonywanego zasięgu. Dwie funkcje, jedna zwraca deklaracje drugiej, ta druga korzysta ze zmiennych pierwszej i wtedy ta zmienna zapisuje sie do closure funkcji wewnętrznej
-2. Tworzenie Closure: 
+2. Tworzenie Closure:
+
 - Potrzebne 2 fn: outer i inner
 - fn outer musi zwracać deklarację fn inner
-- fn inner musi korzystać z zmiennych, funkcji bądź klas fn outer 
->Closure do tworzenia unikalnych ID
+- fn inner musi korzystać z zmiennych, funkcji bądź klas fn outer
+  > Closure do tworzenia unikalnych ID
+
 ```js
-const UUID = (id=0) => {
-   return () => {
-      const result = id;
-      id++;
-      return result;
-   };
+const UUID = (id = 0) => {
+  return () => {
+    const result = id;
+    id++;
+    return result;
+  };
 };
 
-const uuid = UUID(123);//do uuid zapisze się deklaracja funkcji UUID i zostanie dopisana zmienna id jako closure do funkcji inner
+const uuid = UUID(123); //do uuid zapisze się deklaracja funkcji UUID i zostanie dopisana zmienna id jako closure do funkcji inner
 
-console.log(uuid());//każde kolejne wykonanie uuid() zwróci liczbę większą o 1 od poprzedniej
+console.log(uuid()); //każde kolejne wykonanie uuid() zwróci liczbę większą o 1 od poprzedniej
 ```
+
 3. site effect powoduje przerenderowanie html, do obsługi używamy useEffect
 4. useEffect jest hookiem, który wywołujemy, pierwszym parametrem jest callback, drugim tablica dependenies, czyli co będzie trigerowało ten efekt. calback może mieć return, który się wykona gdy komponent skończy cykl życia, a w nim może być np. usunięcie addEventListenera gdy go zadeklarujemy w funkcji
 5. clear down - sprzątanie po sobie, usuwanie addEventListener
-6. Global context w React tworzymy: 
+6. Global context w React tworzymy:
+
 ```js
 import React from "react";
 //Komponent z kontekstem
 export const ConfigContext = React.createContext();
 //Obiekt konfiguracyjny
 const configValue = {
-  darkStyle: true,//jakieś dane (klucz: wartość)
+  darkStyle: true, //jakieś dane (klucz: wartość)
 };
 
 const App = () => {
@@ -1384,7 +1457,9 @@ const App = () => {
 
 export default App;
 ```
+
 w komponencie w którym odbieramy wartość tego obiektu (bądź czegokolwiek innego co przekażemy) musimy zaimportować useContext i ConfingContext. Poprzez useContext odebrać te parametry, zapisując je do jakieś zmiennej:
+
 ```js
 import { useContext } from "react";
 import { ConfigContext } from "./App";
@@ -1393,6 +1468,7 @@ const context = useContext(ConfigContext);//tu przekazyjemy zmienne, które zade
 
 context.darkStyle === false ? ... // użycie -> tu np. jakiś warunek, jak przesyłać inne typy danych?
 ```
+
 #
 
 > # 13 grudzien 2021
@@ -1400,104 +1476,120 @@ context.darkStyle === false ? ... // użycie -> tu np. jakiś warunek, jak przes
 ## Zajęcia
 
 1. Gdy klucz obiektu ma "-" w nazwie, należy je pobierać przez kwadratowe nawiasy
+
 ```js
 const ob = {
-   "key-pair": "string" 
-}
+  "key-pair": "string",
+};
 
-let z = ob["key-pair"]
+let z = ob["key-pair"];
 ```
- 2. evt.targrt.attributes -> to jest obiekt gdy event emituje np. button
- 3. Short object notation: gdy klucz i wartość w obiekcie mają taką sama wartość wtedy wystarczy napisać klucz (a domyślnie będzie też wartością)
- ```js
- const a = 5;
- const obj = {
-    a = 5;
- }
- //to to samo co:
- const obj2 = {
-    a //to znaczy to samo co a: a, pierwsza to klucz, druga to zmienna a spoza obiektu
- }
- ```
- 4. next,js żeby zaimportować css do next.js należy stworzyć komponent o nazwie _app.js w folderze pages
- ```js
+
+2.  evt.targrt.attributes -> to jest obiekt gdy event emituje np. button
+3.  Short object notation: gdy klucz i wartość w obiekcie mają taką sama wartość wtedy wystarczy napisać klucz (a domyślnie będzie też wartością)
+
+```js
+const a = 5;
+const obj = {
+   a = 5;
+}
+//to to samo co:
+const obj2 = {
+   a //to znaczy to samo co a: a, pierwsza to klucz, druga to zmienna a spoza obiektu
+}
+```
+
+4.  next,js żeby zaimportować css do next.js należy stworzyć komponent o nazwie \_app.js w folderze pages
+
+```js
 import "../public/static/bootstrap.css";
 import "../public/static/site.css";
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
- ```
- 5. getStaticPropos
- ```js
-export async function getStaticPropos(){
-    const req = await fetch("/some-api");
-    const smth = await req.json();
+```
+
+5.  getStaticPropos
+
+```js
+export async function getStaticPropos() {
+  const req = await fetch("/some-api");
+  const smth = await req.json();
 }
 
-    return {
-       props: { smth },
-    }
+return {
+  props: { smth },
+};
 ```
+
 6. getServerSideProps
- ```js
-export async function getServerSideProps(){
-    const req = await fetch("/some-api");
-    const smth = await req.json();
 
-    return {
-       props: { smth },
-    }
+```js
+export async function getServerSideProps() {
+  const req = await fetch("/some-api");
+  const smth = await req.json();
+
+  return {
+    props: { smth },
+  };
 }
 ```
+
 7. getStaticPropos with hydration
- ```js
-export async function getStaticPropos(){
-    const req = await fetch("/some-api");
-    const smth = await req.json();
+
+```js
+export async function getStaticPropos() {
+  const req = await fetch("/some-api");
+  const smth = await req.json();
 }
 
-    return {
-       props: { smth },
-       revalidate: 30
-    }
+return {
+  props: { smth },
+  revalidate: 30,
+};
 ```
 
-
- #
+#
 
 > # 15 grudzien 2021
 
 ## Zajęcia
 
-1. payload -  useReducer 
-2. >Ternary operator w skróconej formie: warunek && prawda - (nie ma else)
+1. payload - useReducer
+2. > Ternary operator w skróconej formie: warunek && prawda - (nie ma else)
 3. React props - komponent może posiadać default props object, przekazane propsy nadpiszą defaultowe
+
 ```js
 CompName.defaultProps = {
-   foo: "whatever"
-}
-``` 
+  foo: "whatever",
+};
+```
+
 4. React propTypes - zabezpiecza przed użyciem poprawnych danych (tak jak typescript)
+
 ```js
 import PropTypes from "prop-types";
 
 CompName.propTypes = {
-   foo: PropTypes.string.isRequired
-}
+  foo: PropTypes.string.isRequired,
+};
 ```
+
 5. style w React możemy przypisać na kilka sposobów:
+
 - stylesheet, plik css ktory importujemy do komponentu
 - inline style={{backgroundColor: red}}, lowerCamelCase
 - style component, external package
 - by js object, variable, ktory dodajemy jak inline, style={headingStyle}
+
 ```js
 const headingStyle = {
    color: white;
 }
 ```
 
- #
+#
 
 > # 07 marzec 2022 - JS ULTIMATE
 
@@ -1506,12 +1598,13 @@ const headingStyle = {
 # Javascript
 
 ## Variables
-x | var | let | const
---- | --- | --- | ---
-redeclaration | yes | no | no
-reassignment | yes | yes | no
-hoisting | yes | no | no
-block scope | no | yes | yes
+
+| x             | var | let | const |
+| ------------- | --- | --- | ----- |
+| redeclaration | yes | no  | no    |
+| reassignment  | yes | yes | no    |
+| hoisting      | yes | no  | no    |
+| block scope   | no  | yes | yes   |
 
 ### Hoisting
 
@@ -1520,7 +1613,10 @@ block scope | no | yes | yes
 ### Shallow vs Deep Copy (References concept)
 
 ```js
-const a = [[1, 2], [3, 4]];
+const a = [
+  [1, 2],
+  [3, 4],
+];
 const b = a;
 b[0][0] = 10;
 
@@ -1547,6 +1643,7 @@ console.log(a); // [ [ 100, 200 ], [ 3, 4 ] ]
 ```
 
 Redeclaration of variables
+
 ```js
 var x;
 var x;
@@ -1562,6 +1659,7 @@ console.log(z); // SyntaxError: Missing initializer in const declaration
 ```
 
 Hoisting
+
 ```js
 console.log(x);
 var x = 10;
@@ -1577,9 +1675,11 @@ function hoisting() {
   y = 10;
 }
 
-hoisting()
+hoisting();
 ```
+
 Reassignment
+
 ```js
 var x = 10;
 x = 20;
@@ -1592,13 +1692,14 @@ console.log(y);
 const z = 10;
 z = 20; // TypeError: Assignment to constant variable.
 ```
-Scope
-```js
 
+Scope
+
+```js
 {
-    var x = 10;
-    let y = 10;
-    const z = 10;
+  var x = 10;
+  let y = 10;
+  const z = 10;
 }
 
 console.log(x); // 10
@@ -1608,22 +1709,25 @@ console.log(x); // 10
 let a = 1;
 
 if (1 === 1) {
-    a = [1, 2, 3][a];
+  a = [1, 2, 3][a];
 } else {
-    a = 30
+  a = 30;
 }
 
 console.log(a); // 2
 
 for (let i = 0; i < 10; i++) {
-    setTimeout(function() {
-        console.log(i);
-    }, 0);
+  setTimeout(function () {
+    console.log(i);
+  }, 0);
 }
 
 console.log(i); // 10
 
-const a = [[1, 2], [3, 4]];
+const a = [
+  [1, 2],
+  [3, 4],
+];
 const b = a;
 b[0][0] = 10;
 // console.log(a); // [ [ 10, 2 ], [ 3, 4 ] ]
@@ -1642,7 +1746,6 @@ c[0] = [100, 200];
 // console.log(a); // [ [ 100, 20 ], [ 3, 4 ] ]
 // console.log(c); // [ [ 100, 200 ], [ 3, 4 ] ]
 
-
 const d = JSON.parse(JSON.stringify(a));
 d[0][0] = 1000;
 console.log(d); // [ [ 1000, 200 ], [ 3, 4 ] ]
@@ -1658,7 +1761,9 @@ console.log(a); // [ [ 100, 200 ], [ 3, 4 ] ]
 - NaN - Not a (correct) Number
 
 ## Arrays (object subtype)
+
 ### methods:
+
 1. '[1, 2, 3].concat([4, 5, 6])' - concat
 2. '[1, 2, 3].includes(2)' - includes (returns true or false) test if element exists in array
 3. '[1, 2, 3, NaN].indexOf(2)' - indexOf (returns index of element or minus 1 if not found) Not working with NaN
@@ -1673,7 +1778,7 @@ console.log(a); // [ [ 100, 200 ], [ 3, 4 ] ]
 12. '[1, 2, 3].sort()' - sort (returns new array with elements sorted)
 13. '[1, 2, 3].toString()' - toString (returns string representation of array)
 14. '[1, 2, 3].valueOf()' - valueOf (returns array)
-15. '[1, 2, 3].map(x => x * 2)' - map (returns new array with elements transformed by callback) - transform array
+15. '[1, 2, 3].map(x => x \* 2)' - map (returns new array with elements transformed by callback) - transform array
 16. '[1, 2, 3].filter(x => x > 1)' - filter (returns new array with elements filtered by callback) - delete elements
 17. '[1, 2, 3].reduce((acc, cur) => acc + cur)' - reduce (returns single value) - sum - aggregate array
 18. '[1, 2, 3].reduceRight((acc, cur) => acc + cur)' - reduceRight (returns single value) - sum - aggregate array
@@ -1711,11 +1816,11 @@ const b = Object.assign([], x);
 #### Check if array
 
 ```js
-const o = [1,2,3]
+const o = [1, 2, 3];
 
-typeof(o)// object
-Array.isArry([])// true
-o instanceof Array// true
+typeof o; // object
+Array.isArry([]); // true
+o instanceof Array; // true
 ```
 
 t[t.length-1] ostatni element z tablicy
@@ -1726,6 +1831,163 @@ t[t.length-1] ostatni element z tablicy
 
 ## Zajęcia
 
-Transpilacja - konwertowanie jednej wersji jezyka do innej wersji jezyka, najpopularniejsze transpilatory to: babel i typescript ma swój 
+Transpilacja - konwertowanie jednej wersji jezyka do innej wersji jezyka, najpopularniejsze transpilatory to: babel i typescript ma swój
 
-^karet w npm wersjonowaniu paczek w JS oznacza nie starsze niż
+^karet w npm wersjonowaniu paczek w JS oznacza nie starsze niż, master ma byc takie jak przy
+
+> # 04 kwiecień 2022
+
+## Powtórka
+
+1. this jest kontekstem, definiuje kontekst do wywołania funkcji
+
+## Zajęcia TS
+
+```typescript
+// Number
+
+let pizzaCost = 10;
+pizzaCost = 25;
+
+function calculatePrice(cost: number, toppings: number): number {
+  return cost + 4 * toppings;
+}
+
+// String
+
+const coupon: string = "pizza25";
+
+function normalizaCoupon(code: string): string {
+  return code.toUpperCase();
+}
+
+const couponMessage: string = `Final coupon is ${normalizaCoupon(coupon)}`;
+
+// Boolean
+
+function offerDiscount(orders: number): boolean {
+  return orders > 3;
+}
+
+// Any
+
+let coupon2;
+coupon2 = 43;
+coupon2 = "43";
+
+let coupon3: any;
+
+// Void
+
+let selectedTopping: string;
+
+function selectTopping(topping: string): void {
+  selectedTopping = topping;
+}
+
+// Never
+
+function orderError(error: string): never {
+  throw new Error(error);
+}
+
+orderError("Something went wrong");
+
+// Null
+
+let coupon4: string | null = "pizza25";
+
+function removeCoupon(): void {
+  coupon4 = null;
+}
+
+// Union
+
+let pizzaSize: string = "small";
+
+function selectSize(size: "small" | "medium" | "large"): void {
+  pizzaSize = size;
+}
+
+selectSize("medium");
+
+// Function type
+
+function sumOrder(price: number, quantity: number): number {
+  return price * quantity;
+}
+
+const sumOrder2: (price: number, quantity: number) => number = (x, y) => x * y;
+
+sumOrder2(2, 42);
+
+// Function optional arguments
+let sumOrder3: (price: number, quantity?: number | undefined) => number;
+
+// Function default parameters
+let sumOrder4: (price: number, quantity?: number) => number;
+sumOrder4 = (x, y = 1) => x * y;
+
+// Object type
+let pizza: { name: string; price: number; foo: string; getName(): string } = {
+  name: "peperoni",
+  price: 20,
+  foo: "bar",
+  getName() {
+    return pizza.name;
+  },
+};
+
+// Array type
+
+function getSize(): string {
+  return "42";
+}
+
+let sizes: string[];
+
+sizes = ["small", "medium", "large", getSize()];
+
+let toppings: Array<string>; // generic type
+toppings = ["peperoni", "tomato", "bacon"];
+
+// Tuple type
+
+let pizza2: [string, number, boolean];
+pizza2 = ["peperoni", 20, true];
+
+// Interface
+
+interface Pizza3 {
+  name: string;
+  sizes: string[];
+}
+
+let pizza3: Pizza3;
+
+function createPizza(name: string, sizes: string[]): Pizza3 {
+  return { name, sizes };
+}
+
+pizza3 = createPizza("peperoni", ["small", "medium"]);
+
+interface Sizes4 {
+  sizes: string[];
+}
+interface Sizes5 {
+  sizes: string[];
+  price?: number;
+}
+
+interface Pizza4 extends Sizes4, Sizes5 {
+  name: string;
+  toppings?: number;
+  getAvailableSizes(): void;
+}
+
+const pizza4: Pizza4 = {
+  name: "Hawaii",
+  getAvailableSizes() {},
+  sizes: ["medium", "small"],
+};
+```
